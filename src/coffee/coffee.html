@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangout Café</title>
+    <link rel="stylesheet" href="/coffee/coffee.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      h1 {
+        font-family: "Lobster", cursive;
+        font-size: 80px;
+      }
+    </style>
+    <style>
+      body {
+        background-image: url("/coffee/Photos/marble.jpeg"); /* Replace with your image path */
+        background-attachment: fixed; /* Fixed background while scrolling */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER TAB -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="/coffee/Photos/Logo_hangout.png" alt="Hangout Café" />
+          <span>Hangout Café</span>
+        </div>
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/coffee">Coffee</a></li>
+          <li><a href="/regular">Regular Drinks</a></li>
+          <li><a href="/food">Food</a></li>
+          <li><a href="/special">Special Drinks</a></li>
+          <span class="cart-icon">
+            <img
+              src="/coffee/Photos/cart.png"
+              class="color-tinted"
+              alt="Cart"
+            />
+          </span>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- STYLING (CSS) FOR CAROUSEL -->
+    <style>
+      .carousel {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: 400px; /* HEIGHT PREFERENCES */
+      }
+
+      .carousel-item {
+        min-width: 100%;
+        transition: transform 1s ease-in-out;
+      }
+
+      .carousel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+
+    <!-- AUTO-SLIDING -->
+    <script>
+      let currentIndex = 0;
+      const items = document.querySelectorAll(".carousel-item");
+
+      function showNextImage() {
+        items[currentIndex].style.transform = "translateX(-100%)";
+        currentIndex = (currentIndex + 1) % items.length;
+        items[currentIndex].style.transform = "translateX(0)";
+      }
+
+      setInterval(showNextImage, 3000); // AUTOSLIDE TIMEFRAME -3000 = 3 seconds
+    </script>
+
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Coffee</h1>
+        <ul class="categories">
+          <li>Hot Drinks &nbsp;</li>
+          <li>Iced Drinks</li>
+          <li>Blended Coffee</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- HOT DRINKS TAB -->
+    <section class="coffee-menu">
+      <h2>Hot Drinks</h2>
+      <div class="menu-items">
+        <div class="item">
+          <h3>CAFE AMERICANO</h3>
+          <hr />
+          <p>12oz &nbsp; ₱105.00</p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>CAFE LATTE</h3>
+          <hr />
+          <p>12oz &nbsp; ₱115.00</p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>CAFE MOCHA</h3>
+          <hr />
+          <p>12oz &nbsp; ₱115.00</p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>CAPPUCINO</h3>
+          <hr />
+          <p>12oz &nbsp; ₱115.00</p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>CARAMEL MACCHIATO</h3>
+          <hr />
+          <p>12oz &nbsp; ₱125.00</p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>MATCHA LATTE</h3>
+          <hr />
+          <p>12oz &nbsp; ₱125.00</p>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ICED DRINKS TAB -->
+    <section class="coffee-menu">
+      <h2>Iced Drinks</h2>
+      <div class="menu-items">
+        <div class="item">
+          <h3>ICED AMERICANO</h3>
+          <hr />
+          <div class="sizes">
+            <p>
+              16oz &nbsp; ₱125.00<br />
+              22oz &nbsp; ₱145.00
+            </p>
+          </div>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>ICED LATTE</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱130.00<br />
+            22oz &nbsp; ₱150.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>ICED MOCHA</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>ICED WHITE CHOCOLATE</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>ICED TOFFEE JELLY</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>ICED CARAMEL MACCHIATO</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+
+        <div class="item">
+          <h3>ICED MATCHA GREEN TEA</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLENDED COFFEE SECTION -->
+    <section class="coffee-menu">
+      <h2>Blended Coffee</h2>
+      <div class="menu-items">
+        <div class="item">
+          <h3>TOFFEE JELLY</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>WHITE CHOCOLATE</h3>
+          <hr />
+          <p>
+            160z &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>HAZELNUT</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱140.00<br />
+            22oz &nbsp; ₱160.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>CARAMEL COFFEE JELLY</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱150.00<br />
+            22oz &nbsp; ₱170.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+        <div class="item">
+          <h3>CHOCOLATE OVERLOAD</h3>
+          <hr />
+          <p>
+            16oz &nbsp; ₱150.00<br />
+            22oz &nbsp; ₱170.00
+          </p>
+          <button>Add to cart</button>
+        </div>
+      </div>
+
+      <!-- FOOTER TAB -->
+      <footer>
+        <div class="footer-content">
+          <p>© 2024 Hangout Café. All Rights Reserved.</p>
+        </div>
+      </footer>
+
+      <!-- CSS STYLING FOR FOOTER AND BG -->
+      <style>
+        footer {
+          background-color: #2f2a75; /* BLUE PALETTE TO MATCH THE VIBES OF LOGO */
+          color: white;
+          text-align: center;
+          padding: 20px 0;
+          position: fixed;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+        }
+
+        footer p {
+          margin: 0;
+          font-family: "Poppins", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        body {
+          margin: 0;
+          padding-bottom: 60px; /* Adjust depending on footer height */
+        }
+      </style>
+    </section>
+  </body>
+</html>

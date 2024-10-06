@@ -1,0 +1,203 @@
+/* COMMON STYLES */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #f2e9e9;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav .logo span {
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+nav .menu {
+  display: flex;
+  list-style: none;
+}
+
+nav .menu li {
+  margin-left: 25px;
+}
+
+nav .menu li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.cart-icon img {
+  margin-left: 25px;
+  width: 24px;
+  height: 24px;
+}
+
+.banner {
+  background-image: url("Photos/milktea.jpg"); /* IMAGE PATH */
+  background-size: cover;
+  background-position: center;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  position: relative;
+}
+
+.banner-content h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.categories {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* COFFEE MENU SECTION */
+.coffee-menu {
+  margin: 50px auto; /* Center the menu section */
+  max-width: 1000px; /* Limit the width for centering */
+}
+
+.coffee-menu h2 {
+  font-size: 26px;
+  color: #292d78;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* MENU ITEMS */
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px; /* Increase gap for more breathing space */
+  justify-content: center; /* Center the grid items */
+}
+
+/* BOX OF EACH INDIVIDUAL MENU */
+.item {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure the content starts at the top */
+  height: 130px; /* Set a fixed height for consistent boxes */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ITEM LINE */
+.item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #292d78;
+  font-weight: 600;
+}
+
+/* SEPARATOR LINE */
+.item hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0; /* Add space around the separator line */
+  width: 100%; /* Ensure the line spans the full width of the container */
+}
+
+/* STYLE OF PRICING */
+.item p {
+  font-size: 18px;
+  color: #292d78;
+  font-weight: bold;
+  margin: 0; /* Remove default margins */
+  position: absolute;
+  bottom: 15px; /* Align to the bottom */
+  left: 15px; /* Align to the left */
+}
+
+/* ADD TO CART BUTTON */
+button {
+  background-color: #292d78;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px; /* Align to the bottom */
+  right: 15px; /* Align to the right */
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4952ca;
+}
+
+/* SPACE BETWEEN ELEMENTS */
+.item-content {
+  margin-bottom: auto;
+}
+
+/* CENTERING OF GRIDS LAST ROW */
+.menu-items::after {
+  content: "";
+  flex-grow: 999999999;
+  min-width: 250px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .menu-items {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px; /* Adjust gap for smaller screens */
+  }
+
+  .item p,
+  button {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangout Cafe</title>
+    <link rel="stylesheet" href="/home/home.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.css"
+      integrity="sha512-U9Y1sGB3sLIpZm3ePcrKbXVhXlnQNcuwGQJ2WjPjnp6XHqVTdgIlbaDzJXJIAuCTp3y22t+nhI4B88F/5ldjFA=="
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <!-- NAVBAR SECTION -->
+    <header>
+      <nav>
+        <div class="logo">
+          <span>Hangout Café</span>
+        </div>
+
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/coffee">Coffee</a></li>
+          <li><a href="/regular">Regular Drinks</a></li>
+          <li><a href="/food">Food</a></li>
+          <li><a href="/special">Special Drinks</a></li>
+          <span class="cart-icon">
+            <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
+            <span id="cart-count">0</span>
+          </span>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-section">
+      <section class="section-1">
+        <video autoplay muted loop playsinline class="background-video">
+          <source src="/home/Videos/hero-header.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Floating text -->
+        <div class="floating-text">
+          <h2 class="section-4__h5 text-center">- Hangout Cafe -</h2>
+          <p class="section-4__p text-center">
+            Brewed to bring people together
+          </p>
+        </div>
+      </section>
+      <div class="logo-container">
+        <img
+          src="/home/Images/Section-4-Images/section-4-logo-float.svg"
+          alt="Cafe Image"
+          class="logo-image"
+        />
+      </div>
+
+      <section class="section-4 responsive-container">
+        <p class="section-4__p black-clr text-center">
+          At Hangout Cafe, we believe in creating more than just a place to grab
+          a coffee or a bite to eat. We aim to foster a community where friends,
+          families, and colleagues can come together to relax, unwind, and enjoy
+          delicious food and beverages in a cozy atmosphere. Whether you're here
+          for a quick pick-me-up, a casual meeting, or to simply hang out with
+          friends, our cafe is your go-to spot.
+        </p>
+        <div class="section-4__img-div">
+          <img
+            src="/home/Images/Section-4-Images/section-4-img-1.svg"
+            alt="Section 4 Image 1"
+          />
+          <img
+            src="/home/Images/Section-4-Images/section-4-img-2.svg"
+            alt="Section 4 Image 2"
+          />
+          <img
+            src="/home/Images/Section-4-Images/section-4-img-3.svg"
+            alt="Section 4 Image 3"
+          />
+          <img
+            src="/home/Images/Section-4-Images/section-4-img-4.svg"
+            alt="Section 4 Image 4"
+          />
+          <img
+            src="/home/Images/Section-4-Images/section-4-img-5.svg"
+            alt="Section 4 Image 5"
+          />
+        </div>
+      </section>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const images = document.querySelectorAll(".section-4__img-div img");
+
+          const options = {
+            root: null, // Use the viewport as the root
+            rootMargin: "0px",
+            threshold: 0.1, // Trigger when at least 10% of the image is visible
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Add the 'visible' class to the image when it is in view
+                entry.target.classList.add("visible");
+                // Optionally, stop observing after the first visibility
+                observer.unobserve(entry.target);
+              }
+            });
+          }, options);
+
+          images.forEach((image) => {
+            observer.observe(image);
+          });
+        });
+      </script>
+
+      <section class="section-2 responsive-container">
+        <div class="section-2-left">
+          <video
+            src="/home/Videos/hero-section.mp4"
+            video
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+        </div>
+        <div class="section-2-right">
+          <h2 class="section-2-right__h2 black-clr">How to Order</h2>
+          <h4 class="section-2-right__h4 black-clr">01. Choose Your Food</h4>
+          <p class="section-2-right__p black-clr">
+            Take a moment to explore our carefully curated menu. From
+            handcrafted coffees and refreshing smoothies to delicious pastries
+            and hearty meals, we’ve got something to satisfy every craving.
+            Ordering is made simple with our partnership with FoodPanda and
+            Grab. Just browse, click, and choose your favorite items — all from
+            the comfort of your phone or computer!
+          </p>
+
+          <h4 class="section-2-right__h4 black-clr">02. Order Online</h4>
+          <p class="section-2-right__p black-clr">
+            Enjoy the convenience of ordering online! Whether you're working
+            from home, relaxing with family, or simply avoiding the traffic, our
+            online service brings the cafe experience to your doorstep. It’s
+            never been easier to enjoy your favorite coffee or meal from Hangout
+            Cafe. No need to stand in line or rush out of the house—just a few
+            taps, and your order is on its way!
+          </p>
+
+          <h4 class="section-2-right__h4 black-clr">03. Track Your Delivery</h4>
+          <p class="section-2-right__p black-clr">
+            Once your order is placed, sit back and relax while we do the rest.
+            Our delivery is not only fast but also trackable! You’ll receive
+            updates every step of the way, from when your order is prepared to
+            when it’s out for delivery. You can count on our reliable delivery
+            service to bring your order fresh and on time, so you can enjoy your
+            meal without any hassle.
+          </p>
+
+          <h4 class="section-2-right__h4 black-clr">0.4 Savor and Enjoy</h4>
+          <p class="section-2-right__p black-clr">
+            When your food arrives, it’s time to kick back and indulge! Whether
+            it’s our aromatic coffee or a fresh meal, we’re confident you’ll
+            love every bite. And once you’ve enjoyed your meal, don’t forget to
+            share your experience with us! Your reviews help us improve and
+            allow us to continue offering the best possible service.
+          </p>
+
+          <button
+            class="section-2-right__button-secondary"
+            onclick="window.location.href='URL_TO_YOUR_FILE_OR_PAGE'"
+          >
+            Order Now and Experience the Difference!
+          </button>
+        </div>
+      </section>
+      <!-- <section class="section-3 responsive-container common-padding">
+            <h2 class="section-3__h1 black-clr text-center">Step into Hangout Cafe, your perfect spot to unwind and
+                savor every sip! </h2>
+            <p class="section-3__p black-clr text-center">Whether you're craving a rich, aromatic coffee or a sweet
+                treat to brighten your day, our cozy atmosphere and mouthwatering menu make it the ultimate place to
+                relax with friends or enjoy some quiet time. Come hang out, indulge in delicious bites, and make every
+                visit a memorable one!
+
+            </p>
+            <div class="section-3__card-main-div">
+                <div class="section-3__card black-clr">
+                    <h3></h3>
+
+                </div>
+                <div class="section-3__card black-clr">
+                    <div class="section-3__coffee-descp">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="section-3__card black-clr">
+                    <div class="section-3__coffee-descp">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="section-3__card black-clr">
+                    <div class="section-3__coffee-descp">
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="section-3__card black-clr">
+                    <div class="section-3__coffee-descp">
+                        <h3></h3>
+                    </div>
+
+                </div>
+                <div class="section-3__card black-clr">
+                    <div class="section-3__coffee-descp">
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+      <section class="section-6 responsive-container">
+        <h2 class="section-6__h2 black-clr text-center">
+          Community & Events Focus: Looking for the perfect place to connect and
+          create memories?
+        </h2>
+        <p class="section-6__p black-clr text-center">
+          Hangout Cafe is more than just a cafe; it's where friendships are
+          brewed! With a welcoming atmosphere and live events every week, it's
+          the go-to spot for fun, conversation, and a great time. Whether it's
+          game night or open mic, come hang out and be part of something
+          special.
+        </p>
+        <div class="section-6__blog-div">
+          <div class="section-6__blog">
+            <img
+              src="/home/Images/Section-6-Images/Blog-image-1.svg"
+              alt="Blog-image-1"
+            />
+
+            <h5 class="section-6__blog-title black-clr">
+              Pure Bliss in Every Sip: The Creamiest <br />
+              Coffee at Hangout Cafe
+            </h5>
+            <p class="section-6__blog-descp black-clr">
+              Experience the ultimate indulgence with the creamiest coffee
+              you'll ever taste at Hangout Cafe. Imagine a cup so smooth, every
+              sip feels like velvet on your tongue, with rich, frothy cream
+              perfectly balanced against the bold, full-bodied espresso. It's
+              the kind of coffee that hugs your senses, leaving a lingering
+              warmth and a touch of sweetness. Crafted to perfection, this
+              luxurious brew is not just a drink—it's a moment of pure bliss in
+              a cup. Come treat yourself to the creamiest coffee that will keep
+              you coming back for more
+            </p>
+            <p class="section-6__blog-descp black-clr">
+              The strawberry frappe was absolutely amazing! So creamy, and the
+              sweetness was just right. Loved the little crunch from the
+              strawberry seeds—such a perfect touch! - Chris Danie
+            </p>
+          </div>
+          <div class="section-6__blog">
+            <h5 class="section-6__blog-title black-clr">
+              Sip, Snack, and Savor: <br />
+              The Perfect Pairings at Hangout Cafe
+            </h5>
+            <p class="section-6__blog-descp black-clr">
+              Craving the perfect blend of snacks and drinks? At Hangout Cafe,
+              treat yourself to crispy, golden fries paired with our smooth,
+              creamy milk teas and indulgent frappes. Our milk teas are bursting
+              with flavor, offering the perfect balance of creaminess and
+              refreshment, while our frappes are topped with velvety whipped
+              cream and a drizzle of caramel. Whether you're in the mood for
+              something light or a sweet treat, our menu has everything to make
+              your visit unforgettable. Sip, snack, and relax in style at
+              Hangout Cafe!
+            </p>
+            <p class="section-6__blog-descp black-clr">
+              I just tried the creamy carbonara, and it was fantastic! The sauce
+              was rich and smooth, coating the pasta perfectly. The bacon added
+              a nice crunch, and the flavors blended together so well - Vince
+            </p>
+            <p class="section-6__blog-descp black-clr"></p>
+            <img
+              src="/home/Images/Section-6-Images/Blog-image-2.svg"
+              alt="Blog-image-1"
+            />
+            <p class="section-6__blog-descp black-clr"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-5">
+        <div class="responsive-container">
+          <h2 class="section-5__h2 text-center black-clr">
+            Hangout Cafe: More Than Just a Coffee Shop
+          </h2>
+          <p class="section-5__p text-center black-clr">
+            Choosing Hangout Cafe could be appealing for several reasons:
+          </p>
+          <br />
+
+          <div class="image-container">
+            <img
+              src="/home/Images/Section-5-Images/section-5-img-1-menu.svg"
+              alt="Blog-image-1"
+            />
+          </div>
+          <div class="section-5__testimonial-div">
+            <div class="section-5__testimonial black-clr">
+              <p>
+                Relaxed Atmosphere &nbsp;&nbsp;<i
+                  class="fa-solid fa-star yellow-clr"
+                ></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star white-clr"></i>
+              </p>
+              <p>
+                Hangout Cafe typically offers a cozy and casual environment,
+                making it perfect for socializing, studying, or unwinding after
+                a busy day.
+              </p>
+            </div>
+
+            <div class="section-5__testimonial black-clr">
+              <p>
+                Variety of Beverages &nbsp;&nbsp;<i
+                  class="fa-solid fa-star yellow-clr"
+                ></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i>
+              </p>
+              <p>
+                Whether you're a coffee lover or prefer teas, smoothies, or
+                specialty drinks, Hangout Cafe likely offers a diverse menu to
+                suit different preferences.
+              </p>
+            </div>
+
+            <div class="section-5__testimonial black-clr">
+              <p>
+                Community-Oriented &nbsp;&nbsp;<i
+                  class="fa-solid fa-star yellow-clr"
+                ></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i>
+              </p>
+              <p>
+                Local cafes often foster a sense of community, where regular
+                customers feel welcome and connected.
+              </p>
+            </div>
+
+            <div class="section-5__testimonial black-clr">
+              <p>
+                Tasty Food Options &nbsp;&nbsp;<i
+                  class="fa-solid fa-star yellow-clr"
+                ></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i
+                ><i class="fa-solid fa-star yellow-clr"></i>
+              </p>
+              <p>
+                Many cafes provide a selection of light snacks, pastries, and
+                sandwiches that pair well with drinks, making it a convenient
+                spot for breakfast, brunch, or a light meal.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer common-padding">
+        <div class="responsive-container">
+          <div class="footer__about-div">
+            <h4>About Us</h4>
+            <p>
+              Hangout Café is your cozy spot for great food and drinks in Quezon
+              City! We offer a variety of hot and cold beverages, including
+              fruit tea and milk tea, alongside delicious sandwiches, waffles,
+              pasta with garlic bread, and hearty rice meals. Whether you're
+              grabbing takeout, dining in, or enjoying our outdoor seating,
+              Hangout Cafe is the perfect place to relax. We also offer
+              reservations and in-store pickup for your convenience. Come hang
+              out with us!
+            </p>
+            <p class="footer_copyright-text">
+              Copyright ©2024 <span>Hangout Cafe</span> | All rights reserved
+            </p>
+          </div>
+
+          <div class="footer__follow-us">
+            <h4>Follow Us</h4>
+            <p>Let us be social</p>
+            <div class="footer__social-links">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

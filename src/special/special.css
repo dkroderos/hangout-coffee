@@ -1,0 +1,428 @@
+/* NAVBAR */
+
+header {
+  background-color: #e1d9cf;
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  margin-left: 2rem;
+}
+
+nav .logo span {
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: #081a48;
+}
+
+nav .menu {
+  list-style-type: none;
+  display: flex;
+  list-style: none;
+}
+
+nav .menu li {
+  margin-left: 25px;
+}
+
+nav .menu li a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #081a48;
+}
+
+.cart-icon img {
+  margin-left: 25px;
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+/* END NAVBAR */
+
+/* MAIN */
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* SECTION STYLES*/
+.section-1 {
+  position: relative;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.section-1 h1 {
+  font-family: "Lobster";
+  font-style: normal;
+  position: absolute;
+  font-size: 95px;
+  font-weight: 400px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 28px;
+  left: 29%;
+  top: 18%;
+  color: #081a48;
+  padding: 20px;
+}
+
+.section-text1 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  position: absolute;
+  font-size: 26px;
+  font-weight: 800px;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 28px;
+  top: 78%;
+  left: 1%;
+  color: #081a48;
+  padding: 20px;
+}
+
+.section-2 {
+  position: relative;
+}
+.section-2 h1 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  position: absolute;
+  font-size: 23px;
+  font-weight: bold;
+  text-align: start;
+  letter-spacing: 1px;
+  left: 1%;
+  color: #000000;
+  background-image: url("specialdrinks_pics/bg2.png");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  display: inline-block;
+  border-bottom: 4px solid #000000;
+  width: 23%;
+  padding-bottom: 10px;
+}
+
+.section-2_1 h1 {
+  top: 0;
+}
+
+.section-2_2 h1 {
+  top: 16%;
+}
+
+.section-2_3 h1 {
+  top: 33%;
+}
+
+.section-2_4 h1 {
+  top: 49%;
+}
+
+.section-2_5 h1 {
+  top: 65%;
+}
+
+.section-2_6 h1 {
+  top: 81%;
+}
+
+/* CONTAINER STYLES*/
+.container-1,
+.container-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+  position: absolute;
+  top: 5%;
+  left: 3%;
+}
+
+.container-2 {
+  top: 21%;
+}
+
+.container-3,
+.container-4,
+.container-5,
+.container-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  position: absolute;
+  width: 100%;
+  top: 38%;
+}
+
+.container-4 {
+  top: 54%;
+}
+
+.container-5 {
+  top: 70%;
+}
+
+.container-6 {
+  top: 86%;
+}
+
+/* CARDS STYLES */
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+  background-color: #081a48;
+  padding: 20px;
+  border-radius: 25px;
+  color: white;
+  width: 250px;
+  height: 130px;
+  text-align: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.card-1 h3,
+.card-2 h3,
+.card-3 h3,
+.card-4 h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.card-1 h3.custom-header,
+.card-2 h3.custom-header,
+.card-3 h3.custom-header,
+.card-4 h3.custom-header {
+  font-size: 18px;
+  margin-bottom: 0px;
+  margin-top: 7px;
+}
+
+.card-1 .line,
+.card-2 .line,
+.card-3 .line,
+.card-4 .line {
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+.custom-card {
+  background-color: #081a48;
+  padding: 20px;
+  border-radius: 25px;
+  color: white;
+  width: 250px;
+  height: 155px;
+  text-align: center;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.custom-card h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.custom-card .line {
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  margin: 10px auto;
+}
+
+/* CARD DETAILS */
+.details {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  margin-top: 30px;
+  justify-content: space-evenly;
+}
+
+.details_2 {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  margin-inline-start: 7.5%;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.details_2 span {
+  margin-bottom: -20px;
+}
+
+.details span {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+
+.add-to-cart {
+  background-color: white;
+  color: #081a48;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #ddd;
+}
+
+/* FOOTER STYLES */
+.bottom-bar {
+  background: #081a48;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.bottom-bar p {
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300px;
+  padding: 2px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .section-1 h1 {
+    font-size: 70px;
+    left: 25%;
+  }
+  .section-text1 {
+    font-size: 22px;
+    top: 75%;
+  }
+  .container-1,
+  .container-2 {
+    gap: 40px;
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .custom-card {
+    width: 200px;
+    height: 110px;
+  }
+  .custom-card {
+    height: 130px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-1 h1 {
+    font-size: 50px;
+    left: 20%;
+    top: 15%;
+  }
+  .section-text1 {
+    font-size: 18px;
+    top: 72%;
+  }
+  .container-1,
+  .container-2 {
+    flex-direction: column;
+    gap: 30px;
+    left: 0;
+    top: 10%;
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .custom-card {
+    width: 160px;
+    height: 90px;
+  }
+  .custom-card {
+    height: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-1 h1 {
+    font-size: 35px;
+    left: 10%;
+    top: 12%;
+  }
+  .section-text1 {
+    font-size: 16px;
+    top: 68%;
+  }
+  .container-1,
+  .container-2 {
+    gap: 20px;
+    top: 15%;
+  }
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .custom-card {
+    width: 140px;
+    height: 80px;
+  }
+  .custom-card {
+    height: 100px;
+  }
+  .add-to-cart {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+}
+
+/* END MAIN */
