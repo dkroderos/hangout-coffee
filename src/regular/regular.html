@@ -21,9 +21,12 @@
           <li><a href="/regular">Regular Drinks</a></li>
           <li><a href="/food">Food</a></li>
           <li><a href="/special">Special Drinks</a></li>
+          <a href="/cart" style="text-decoration: none;  display: flex;">
           <span class="cart-icon">
             <img src="/regular/pics/cart.png" class="color-tinted" alt="Cart" />
           </span>
+          <span id="cart-count" style="color: black;"></span>
+          </a>
         </ul>
       </nav>
     </header>
@@ -97,10 +100,13 @@
               </div>
             </div>
           </div>
+          <!-- ggparent -->
           <div class="product">
             <h3>Hokkaido</h3>
             <hr />
+            <!-- gparent -->
             <div class="sizes">
+              <!-- parent -->
               <div class="size-option">
                 <span class="size">16oz</span>
                 <span class="price">₱105.00</span>
@@ -204,5 +210,6 @@
       </div>
     </div>
     <footer>© 2024 Hangout Café. All Rights Reserved.</footer>
+    <script src="/regular/regular.js"></script>
   </body>
 </html>
