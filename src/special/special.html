@@ -30,10 +30,12 @@
           <li><a href="/regular">Regular Drinks</a></li>
           <li><a href="/food">Food</a></li>
           <li><a href="/special">Special Drinks</a></li>
-          <span class="cart-icon">
-            <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
-            <span id="cart-count">0</span>
-          </span>
+          <a href="/cart" style="text-decoration: none;  display: flex;">
+            <span class="cart-icon">
+                <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
+            </span>
+            <span id="cart-count" style="color: black;"></span>
+          </a>
         </ul>
       </nav>
     </header>
@@ -56,7 +58,7 @@
       </div>
     </section>
 
-    <!-- BERRY SERIES -->
+    <!-- PRODUCTS SECTION -->
     <section class="section-2">
       <img
         src="/special/specialdrinks_pics/bg.png"
@@ -64,6 +66,7 @@
         height="100%"
       />
 
+      <!-- BERRY SERIES -->
       <section class="section-2_1">
         <h1>BERRY SERIES</h1>
 
@@ -131,6 +134,7 @@
             <div class="details_2">
               <span>16 oz.</span>
               <span>₱140</span>
+              <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="details">
               <span>22 oz.</span>
@@ -147,6 +151,7 @@
             <div class="details_2">
               <span>16 oz.</span>
               <span>₱140</span>
+              <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="details">
               <span>22 oz.</span>
@@ -163,6 +168,7 @@
             <div class="details_2">
               <span>16 oz.</span>
               <span>₱140</span>
+              <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="details">
               <span>22 oz.</span>
@@ -179,6 +185,7 @@
             <div class="details_2">
               <span>16 oz.</span>
               <span>₱140</span>
+              <button class="add-to-cart">Add to Cart</button>
             </div>
             <div class="details">
               <span>22 oz.</span>
@@ -356,5 +363,6 @@
         <p>© 2024 Hangout Cafe. All Rights Reserved.</p>
       </div>
     </footer>
+    <script src="/special/special.js"></script>
   </body>
 </html>
