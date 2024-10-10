@@ -11,11 +11,12 @@ function setupAddToCartButtons() {
         button.addEventListener('click', function () {
             const grandParent = this.parentElement.parentElement;
             const parent = this.parentElement;
+
             const name = grandParent.querySelector('h3').innerText;
             const ounce = parent.querySelector('span:nth-child(1)').innerText;
             const price = parent.querySelector('span:nth-child(2)').innerText;
 
-            const itemName = name + ` (${ounce})`;
+            const itemName = name + ` (${ounce})`; //Strawberry Cheesecake (22oz)
             const itemPrice = parseFloat(price.replace('₱', ''));
 
             const item = {
@@ -56,7 +57,7 @@ function addToCart(item) {
     }
 
     saveCart(cart);
-    alert(quantity + " of " + item.name + " added to cart! \nCost: ₱ " + cost);
+    alert(quantity + " of " + item.name + " added to cart! \nCost: ₱ " + cost.toFixed(2));
 }
 
 
