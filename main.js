@@ -38,9 +38,9 @@ app.get("/special", (req, res) => {
 
 // Pag naadd niyo na yung cart uncomment niyo to:
 
-// app.get("/cart", (req, res) => {
-//   res.sendFile(path.join(__dirname, "src", "cart", "cart.html"));
-// });
+app.get("/cart", (req, res) => {
+  res.sendFile(path.join(__dirname, "src", "cart", "cart.html"));
+});
 
 app.use((req, res) => {
   res.redirect("/");

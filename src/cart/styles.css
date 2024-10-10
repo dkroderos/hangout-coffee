@@ -1,0 +1,490 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    
+}
+
+body {
+    font-family: Poppins;
+    background-color: #FDF8ED;
+    color: #081A48;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+header {
+    background-color: #E1D9CF;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    font-family: Poppins;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-left: 2rem;
+}
+
+nav .logo span {
+    font-size: 1.35rem;
+    font-weight: 500;
+}
+
+nav .menu {
+    display: flex;
+    list-style: none;
+}
+
+nav .menu li {
+    margin-left: 25px;
+}
+
+nav .menu li a {
+    font-size: 1.20rem;
+    font-weight: 500;
+}
+
+.cart-icon img {
+    margin-left: 25px;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+
+/* Main Layout */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1300px;
+    max-height: 100%;
+    margin: 0 auto;
+
+}
+
+.order-list {
+    position: sticky; /* Make it sticky */
+    width: 75%;
+    height: 100%;
+    background-color: #FDF8ED;
+    padding: 20px;
+    position: relative;
+    margin-bottom: 10px;
+    
+    
+}
+
+.details-form {
+    width: 48%;
+    background-color: #E1D9CF;
+    padding: 20px;
+    position: sticky;
+    top: 20px; /* Adjust the distance from the top as needed */
+    right: 0;
+    height: 25%;
+    border-radius: 20px;
+    border: 1px solid #dddcdc;
+    font-family: Poppins;
+
+}
+
+
+/* Orders Section */
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    font-weight:500;
+    align-items: center;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    font-weight: 400;
+}
+
+.o-details {
+    text-align: justify;
+    width: 30%;
+}
+
+.o-details p {
+    font-size: 0.5rem;
+}
+
+.order-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    z-index: 2;
+}
+
+.order-item img:hover {
+    opacity: 0;
+    content: '';
+    background-color: rgba(255, 69, 58, 1); /* Red background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-image: none;
+    transform: scale(1.2); /* Optional zoom effect */
+}
+
+.red-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 69, 58, 1); /* Red background */
+    display: none; /* Hidden by default */
+    position: absolute;
+    left: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    transition: all 0.3s ease;
+    z-index: 1;
+    
+}
+
+.order-item img:hover::before {
+    content: "\00d7"; /* X symbol */
+    font-size: 30px;
+    color: white;
+}
+
+.order-item p {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.order-item .price, 
+.order-item .total {
+    font-weight: bold;
+}
+
+.order-item .quantity {
+    display: flex;
+    align-items: center;
+}
+
+.order-item input {
+    cursor: pointer;
+}
+
+.order-item .quantity input {
+    width: 40px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+/* Delivery Form */
+.details-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.details-form form input, 
+.details-form form select, 
+.details-form form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.details-form .form-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details-form .form-group input {
+    color: #081A48;
+    width: 48%;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.map img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Confirm Section */
+.confirm {
+    text-align: right;
+}
+
+.confirm p {
+    margin-bottom: 10px;
+
+}
+
+.confirm button {
+    padding: 10px 20px;
+    background-color: #081A48;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.confirm button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #081A48;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #E1D9CF; /* Background of the scrollbar track */
+    border-radius: 10px; /* Roundness of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #271a03; /* Scrollbar thumb color */
+    border-radius: 10px; /* Roundness of the thumb */
+    border: 3px solid #f1f1f1; /* Creates padding around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Thumb color on hover */
+}
+
+
+
+.o-quantity {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.o-quantity button {
+    background-color: #FDF8ED;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 10px;
+    color: #081A48;
+    transition: background-color 0.3s ease;
+}
+
+.o-quantity button:hover {
+    background-color: rgb(241, 217, 217);
+}
+
+.o-quantity input[type="number"] {
+    border: none;
+    text-align: center;
+    width: 20px;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    appearance: textfield; /* Removes up/down arrows in Chrome */
+}
+
+.o-quantity input[type="number"]::-webkit-outer-spin-button,
+.o-quantity input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+
+.o-quantity input[type="number"]:focus {
+    background-color: #FDF8ED;
+    border-color: #bbb;
+}
+
+.o-quantity {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.floating-image1 {
+    position: absolute; /* Allows the image to float */
+    top: 50px; /* Distance from the top of the page */
+    right: 50px; /* Distance from the right of the page */
+    width: 150px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1000; /* Ensures it appears on top of other elements */
+}
+
+.floating-image2 {
+    position: absolute; /* Allows the image to float */
+    top: 50px; /* Distance from the top of the page */
+    right: 10px; /* Distance from the right of the page */
+    width: 150px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1000; /* Ensures it appears on top of other elements */
+}
+
+.floating-image3 {
+    position: absolute; /* Allows the image to float */
+    top: 50px; /* Distance from the top of the page */
+    right: 20px; /* Distance from the right of the page */
+    width: 150px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1000; /* Ensures it appears on top of other elements */
+}
+
+.floating-image4 {
+    position: absolute; /* Allows the image to float */
+    top: 19rem; /* Distance from the top of the page */
+    right: 1%; /* Distance from the right of the page */
+    width: 180px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1000; /* Ensures it appears on top of other elements */
+    opacity: 0.15; /* 70% opacity */
+}
+
+
+.floating-image5 {
+    position: absolute; /* Allows the image to float */
+    top: 1rem; /* Distance from the top of the page */
+    left: 60%; /* Distance from the right of the page */
+    width: 50px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1; /* Ensures it appears on top of other elements */
+    transform: rotate(10deg);
+    opacity: 0.4; /* 70% opacity */
+}
+
+
+
+.floating-image7 {
+    position: absolute; /* Allows the image to float */
+    top: 5rem; /* Distance from the top of the page */
+    left: 2%; /* Distance from the right of the page */
+    width: 110px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 10000; /* Ensures it appears on top of other elements */
+    transform: rotate(20deg);
+    opacity: 0.4; /* 70% opacity */
+}
+
+.floating-image9 {
+    position: absolute; /* Allows the image to float */
+    bottom: 0%; /* Distance from the top of the page */
+    left: 43%; /* Distance from the right of the page */
+    width: 200px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    margin-bottom: 3%;
+    z-index: 1; /* Ensures it appears on top of other elements */
+    opacity: 0.4; /* 70% opacity */
+
+}
+
+.floating-image10 {
+    position: absolute; /* Allows the image to float */
+    bottom: 0%; /* Distance from the top of the page */
+    left: 0%; /* Distance from the right of the page */
+    width: 150px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1; /* Ensures it appears on top of other elements */
+    transform: rotate(12deg);
+    opacity: 0.4; /* 70% opacity */
+
+}
+
+.floating-image13 {
+    position: absolute; /* Allows the image to float */
+    bottom: 0%; /* Distance from the top of the page */
+    left: 13%; /* Distance from the right of the page */
+    width: 300px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    margin-bottom: 3%;
+    z-index: 1; /* Ensures it appears on top of other elements */
+    opacity: 0.4; /* 70% opacity */
+
+}
+
+.floating-image1 {
+    position: absolute; /* Allows the image to float */
+    top: 7.25rem; /* Distance from the top of the page */
+    left: 67%; /* Distance from the right of the page */
+    width: 70px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1; /* Ensures it appears on top of other elements */
+    opacity: 0.4; /* 70% opacity */
+
+}
+
+.floating-image16 {
+    position: absolute; /* Allows the image to float */
+    top: 1rem; /* Distance from the top of the page */
+    right: 3%; /* Distance from the right of the page */
+    width: 60px; /* Set the width of the image */
+    height: auto; /* Keep the aspect ratio */
+    z-index: 1; /* Ensures it appears on top of other elements */
+}
+
