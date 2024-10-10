@@ -11,6 +11,8 @@ app.use("/special", express.static(path.join(__dirname, "src", "special")));
 app.use("/food", express.static(path.join(__dirname, "src", "food")));
 app.use("/cart", express.static(path.join(__dirname, "src", "cart")));
 
+app.use("/src", express.static(path.join(__dirname, "src")));
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "home", "home.html"));
 });
