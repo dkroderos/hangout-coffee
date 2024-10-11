@@ -1,6 +1,7 @@
+// Cart functionality
 document.addEventListener('DOMContentLoaded', function () {
     setupAddToCartButtons();
-    updateCartCount(getCart()); 
+    updateCartCount(getCart());
 });
 
 // Handle the "Add to Cart" button click
@@ -9,18 +10,14 @@ function setupAddToCartButtons() {
 
     buttons.forEach(button => {
         button.addEventListener('click', function () {
-            const grandParent = this.parentElement.parentElement;
             const parent = this.parentElement;
-            const name = grandParent.querySelector('h3').innerText;
-            const ounce = parent.querySelector('span:nth-child(1)').innerText;
-            const price = parent.querySelector('span:nth-child(2)').innerText;
-
-            const itemName = name + ` (${ounce})`;
-            const itemPrice = parseFloat(price.replace('₱', ''));
+            const name = parent.querySelector('h3').innerText;
+            const priceText = parent.querySelector('p').innerText;
+            const price = parseFloat(priceText.replace('₱', '').trim());
 
             const item = {
-                name: itemName,
-                price: itemPrice
+                name: name,
+                price: price
             };
 
             addToCart(item);
@@ -28,11 +25,11 @@ function setupAddToCartButtons() {
     });
 }
 
-//Add to cart function
+// Add to cart function
 function addToCart(item) {
     let quantity = prompt("How many of " + item.name + " would you like to add?", "1");
     
-    if (quantity === null) {//canceled
+    if (quantity === null) { // Canceled
         return; 
     }
 
@@ -56,9 +53,8 @@ function addToCart(item) {
     }
 
     saveCart(cart);
-    alert(quantity + " of " + item.name + " added to cart! \nCost: ₱ " + cost);
+    alert(quantity + " of " + item.name + " added to cart! \nCost: ₱" + cost.toFixed(2));
 }
-
 
 // Get current cart from localStorage
 function getCart() {
@@ -73,17 +69,18 @@ function getCart() {
 // Save the cart to localStorage
 function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount(getCart());
+    updateCartCount(cart);
 }
 
 // Update the cart count in the HTML
 function updateCartCount(cart) {
-    const cartCountElement = document.getElementById("cart-count");
-    
+    const cartCountElement = document.querySelector('.cart-icon'); // Adjusted to get the cart icon
     let totalQuantity = 0;
+
     cart.forEach(item => {
         totalQuantity += item.quantity; 
     });
     
-    cartCountElement.innerText = totalQuantity; 
+    // Assuming you want to update some display for the cart count.
+    cartCountElement.innerText = totalQuantity > 0 ? `(${totalQuantity})` : ''; 
 }

@@ -62,7 +62,7 @@ function addToCart(item) {
 
 // Get current cart from localStorage
 function getCart() {
-    let cart = localStorage.getItem("cartRegular");
+    let cart = localStorage.getItem("cart");
     if (cart) {
         return JSON.parse(cart);
     } else {
@@ -72,7 +72,7 @@ function getCart() {
 
 // Save the cart to localStorage
 function saveCart(cart) {
-    localStorage.setItem("cartRegular", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount(getCart());
 }
 
