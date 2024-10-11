@@ -1,3 +1,4 @@
+//angelo was here
 document.addEventListener('DOMContentLoaded', function (event) {
     setupAddToCartButtons();
     const cart = getCart();
