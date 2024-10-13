@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     setupAddToCartButtons();
-    updateCartCount(getCart()); 
+    updateCartCount(getCart());
 });
 
 // Handle the "Add to Cart" button click
@@ -9,18 +9,14 @@ function setupAddToCartButtons() {
 
     buttons.forEach(button => {
         button.addEventListener('click', function () {
-            const grandParent = this.parentElement.parentElement;
             const parent = this.parentElement;
-            const name = grandParent.querySelector('h3').innerText;
-            const ounce = parent.querySelector('span:nth-child(1)').innerText;
-            const price = parent.querySelector('span:nth-child(2)').innerText;
-
-            const itemName = name + ` (${ounce})`;
-            const itemPrice = parseFloat(price.replace('₱', ''));
+            const name = parent.querySelector('h3').innerText;
+            const priceText = parent.querySelector('p').innerText;
+            const price = parseFloat(priceText.replace('₱', '').trim());
 
             const item = {
-                name: itemName,
-                price: itemPrice
+                name: name,
+                price: price
             };
 
             addToCart(item);
@@ -28,11 +24,11 @@ function setupAddToCartButtons() {
     });
 }
 
-//Add to cart function
+// Add to cart function
 function addToCart(item) {
     let quantity = prompt("How many of " + item.name + " would you like to add?", "1");
     
-    if (quantity === null) {//canceled
+    if (quantity === null) { // Cancelled
         return; 
     }
 
@@ -48,17 +44,16 @@ function addToCart(item) {
     const cost = item.price * quantity;
     
     if (existingItem) {
-        existingItem.quantity += quantity;
-        existingItem.price += cost;
+        existingItem.quantity += quantity; // Update quantity
+        existingItem.price += cost; // Update total price
     } else {
-        item.price = cost;
+        item.price = cost; // Set price for the new item
         cart.push({ ...item, quantity }); 
     }
 
     saveCart(cart);
     alert(quantity + " of " + item.name + " added to cart! \nCost: ₱ " + cost);
 }
-
 
 // Get current cart from localStorage
 function getCart() {
@@ -73,12 +68,12 @@ function getCart() {
 // Save the cart to localStorage
 function saveCart(cart) {
     localStorage.setItem("cart", JSON.stringify(cart));
-    updateCartCount(getCart());
+    updateCartCount(cart);
 }
 
 // Update the cart count in the HTML
 function updateCartCount(cart) {
-    const cartCountElement = document.getElementById("cart-count");
+    const cartCountElement = document.querySelector('.cart-icon span') || document.createElement('span');
     
     let totalQuantity = 0;
     cart.forEach(item => {
@@ -86,4 +81,7 @@ function updateCartCount(cart) {
     });
     
     cartCountElement.innerText = totalQuantity; 
+    if (!document.querySelector('.cart-icon span')) {
+        document.querySelector('.cart-icon').appendChild(cartCountElement);
+    }
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Thank You Page</title>
+</head>
+<style>
+body {
+    background-image: url(pics/ty.jpg);
+    background-size: cover;      
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-attachment: fixed;
+    margin: 0;       
+}
+
+.artistic-button {
+    background-color: #E1D9CF; 
+    color: #081A48; 
+    padding: 12px 24px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #081A48;
+    border-radius: 50px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: fixed; 
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%); 
+    overflow: hidden;
+}
+
+
+.artistic-button:hover {
+    background-color: #081A48;
+    color: #E1D9CF;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.artistic-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.artistic-button:hover::before {
+    opacity: 1;
+    width: 400%;
+    height: 400%;
+}
+
+
+</style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="pics/logo.png" alt="Hangout Café">
+                <span>Hangout Café</span>
+            </div>
+        </nav>
+    </header>
+
+    <button class="artistic-button" onclick="continuee()">Continue</button>
+
+    <script>
+        function continuee(){
+    localStorage.clear();
+    window.location.href = "home/home.html";
+    console.log("hamdog");
+}
+    </script>
+</body>
+</html>
