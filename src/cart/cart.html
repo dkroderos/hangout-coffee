@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout Page</title>
-    <link rel="stylesheet" href="/cart/styles.css">
-    <!-- Poppins font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Lobster font -->
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-    (function(){
-    emailjs.init({
-        publicKey: "0nDBLVE7eXNhzLW6G",
-    });
-    })();
-    </script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Checkout Page</title>
+        <link rel="stylesheet" href="/cart/styles.css">
+        <!-- Poppins font -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+        <!-- Lobster font -->
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+        emailjs.init({
+            publicKey: "0nDBLVE7eXNhzLW6G",
+        });
+        })();
+        </script>
+    </head>
 <body>
     <!-- Navbar -->
     <header>
@@ -31,6 +31,7 @@
                 <span>Hangout Café</span>
             </div>
             <ul class="menu">
+                <li><a href="/">Home</a></li>
                 <li><a href="/coffee">Coffee</a></li>
                 <li><a href="/regular">Regular Drinks</a></li>
                 <li><a href="/food">Food</a></li>
@@ -47,11 +48,11 @@
         <!-- Left Side: Orders List -->
         <div class="order-list">
             <div class="order-header">
-                    <img src="/cart/pics/bin.gif" style="width: 30px; height: 30px; margin-left: 2%; margin-right: -12%;">
-                <span class = "description" style="margin-left: 10px;">
+                <img src="/cart/pics/bin.gif" style="width: 30px; height: 30px; margin-left: 2%; margin-right: -12%;">
+                <span class="description" style="margin-left: 10px;">
                     <p>Description</p>
                 </span>
-                <span class = "price" style="margin-left: 100px;">
+                <span class="price" style="margin-left: 100px;">
                     <p>Price</p>
                 </span>
                 <span>
@@ -61,172 +62,13 @@
                     <p>Total</p>
                 </span>
             </div>
-
-            <hr style='border: 1.5px solid #081A48; width: 100%;'>
-
-            <!-- Individual Items -->
-            <div class="order-item">
-                <img src="/cart/pics/americano.png" alt="Cafe Americano" style="margin-right:-10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Cafe Americano</p>
-                </span>
-                <span class="o-price">
-                    <p id="americano-p">₱ 115.0</p>
-                </span>
+            <hr style="border: 1.5px solid #081A48; width: 100%;">
             
-                <span class="o-quantity">
-                    <button onclick="decrement('input1', 'americano-p', 'o1')">-</button>
-                    <input id="input1" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input1', 'americano-p', 'o1')">
-                    <button onclick="increment('input1', 'americano-p', 'o1')">+</button>
-                </span>
-            
-                <span id="o1" class="o-total">₱ 115.0</span>
-            </div>
-            
-            <div class="order-item">
-                <img src="/cart/pics/cafe_latte.png" alt="Cafe Latte" style="margin-right:-10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Cafe Latte</p>
-                </span>
-                <span class="o-price">
-                    <p id="latte-p">₱ 115.0</p>
-                </span>
-            
-                <span class="o-quantity">
-                    <button onclick="decrement('input2', 'latte-p', 'o2')">-</button>
-                    <input id="input2" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input2', 'latte-p', 'o2')">
-                    <button onclick="increment('input2', 'latte-p', 'o2')">+</button>
-                </span>
-            
-                <span id="o2" class="o-total">₱ 115.0</span>
-            </div>
-            
-            <div class="order-item">
-                <img src="/cart/pics/cafe_mocha.png" alt="Cafe Mocha" style="margin-right:-10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Cafe Mocha</p>
-                </span>
-                <span class="o-price">
-                    <p id="mocha-p">₱ 115.0</p>
-                </span>
-            
-                <span class="o-quantity">
-                    <button onclick="decrement('input3', 'mocha-p', 'o3')">-</button>
-                    <input id="input3" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input3', 'mocha-p', 'o3')">
-                    <button onclick="increment('input3', 'mocha-p', 'o3')">+</button>
-                </span>
-            
-                <span id="o3" class="o-total">₱ 115.0</span>
-            </div>
-            
-            <div class="order-item">
-                <img src="/cart/pics/iced_latte.png" alt="Iced Latte" style="margin-right:-10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Iced Latte (22oz)</p>
-                </span>
-                <span class="o-price">
-                    <p id="iced-latte-p">₱ 130.0</p>
-                </span>
-            
-                <span class="o-quantity">
-                    <button onclick="decrement('input4', 'iced-latte-p', 'o4')">-</button>
-                    <input id="input4" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input4', 'iced-latte-p', 'o4')">
-                    <button onclick="increment('input4', 'iced-latte-p', 'o4')">+</button>
-                </span>
-            
-                <span id="o4" class="o-total">₱ 130.0</span>
-            </div>
-            
-            <div class="order-item">
-                <img src="/cart/pics/iced_white_choco.png" alt="Iced White Chocolate" style="margin-right: -10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Iced White Chocolate (16oz)</p>
-                </span>
-                <span class="o-price">
-                    <p id="iced-white-choco-p">₱ 130.0</p>
-                </span>
-            
-                <span class="o-quantity">
-                    <button onclick="decrement('input5', 'iced-white-choco-p', 'o5')">-</button>
-                    <input id="input5" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input5', 'iced-white-choco-p', 'o5')">
-                    <button onclick="increment('input5', 'iced-white-choco-p', 'o5')">+</button>
-                </span>
-            
-                <span id="o5" class="o-total">₱ 130.0</span>
-            </div>
-            
-            <div class="order-item">
-                <img src="/cart/pics/iced_matcha_green_tea.png" alt="Iced Matcha Green Tea" style="margin-right: -10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Iced Matcha Green Tea (22oz)</p>
-                </span>
-                <span class="o-price">
-                    <p id="iced-matcha-tea-p">₱ 160.0</p>
-                </span>
-            
-                <span class="o-quantity">
-                    <button onclick="decrement('input6', 'iced-matcha-tea-p', 'o6')">-</button>
-                    <input id="input6" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input6', 'iced-matcha-tea-p', 'o6')">
-                    <button onclick="increment('input6', 'iced-matcha-tea-p', 'o6')">+</button>
-                </span>
-            
-                <span id="o6" class="o-total">₱ 160.0</span>
-            </div>
-            
-            <div class="order-item">
-                <img src="/cart/pics/iced_coffee_jelly.png" alt="Iced Coffee Jelly" style="margin-right: -10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Iced Coffee Jelly (22oz)</p>
-                </span>
-                <span class="o-price">
-                    <p id="iced-coffee-jelly-p">₱ 160.0</p>
-                </span>
-            
-                <span class="o-quantity">
-                    <button onclick="decrement('input7', 'iced-coffee-jelly-p', 'o7')">-</button>
-                    <input id="input7" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input7', 'iced-coffee-jelly-p', 'o7')">
-                    <button onclick="increment('input7', 'iced-coffee-jelly-p', 'o7')">+</button>
-                </span>
-            
-                <span id="o7" class="o-total">₱ 160.0</span>
-            </div>
-            
-            <div class="order-item">
-                <img src="/cart/pics/iced_caramel_macchiato.png" alt="Iced Caramel Macchiato" style="margin-right: -10%; background-color: #FDF8ED;">
-                <span id="span1" style="position: absolute;" class="red-circle">&times;</span>
-                <span class="o-details">
-                    <p>Iced Caramel Macchiato (16oz)</p>
-                </span>
-                <span class="o-price">
-                    <p id="iced-caramel-macchiato-p">₱ 140.0</p>
-                </span>
-            
-                <span class="o-quantity">
-                    <button onclick="decrement('input8', 'iced-caramel-macchiato-p', 'o8')">-</button>
-                    <input id="input8" type="number" value="1" min="1" style="width: 50px;" onchange="updateItemTotal('input8', 'iced-caramel-macchiato-p', 'o8')">
-                    <button onclick="increment('input8', 'iced-caramel-macchiato-p', 'o8')">+</button>
-                </span>
-            
-                <span id="o8" class="o-total">₱ 140.0</span>
-            </div>
-            
-            <!-- Subtotal Section -->
-            <div class="subtotal">
-                <p>Subtotal:</p>
-                <span id="subtotal">₱ 1,695.00</span>
-            </div>            
+            <!-- Placeholder for dynamic cart items -->
         </div>
 
         <!-- Right Side: Delivery Form -->
         <div class="details-form">
-            <!-- <img src="/cart/pics/12.png" alt="Floating image" class="floating-image16"> -->
             <h2>Delivery</h2>
             <form id="orderForm">
                 <div class="form-group">
@@ -238,51 +80,40 @@
                 <input type="tel" id="contact" placeholder="Contact" required>
                 <input type="email" id="email" placeholder="Email" required>
                 <textarea id="note" placeholder="Note (optional)"></textarea>
-            
-                <h3>Choose Branch</h3>
-                <select id="branch" required>
-                    <option value="" disabled selected>Select Branch</option>
-                    <option value="Muntinlupa Branch">Muntinlupa Branch</option>
-                    <option value="Pacita Branch">Pacita Branch</option>
-                    <option value="Lucena Quezon Branch">Lucena Quezon Branch</option>
-                    <option value="Dasmarinas Cavite Branch">Dasmarinas Cavite Branch</option>
-                    <option value="Alabang Branch">Alabang Branch</option>
-                    <option value="Quezon City Branch">Quezon City Branch</option>
-                </select>
-            
+                
+                <input type="hidden" id="branch" value="QC Branch"> <!-- Fixed to only use QC branch -->
+                
                 <div class="map">
                     <img src="/cart/pics/map.png" alt="Map">
                 </div>
                 
                 <div class="confirm">
-                    <p>Subtotal: <span id="confirm-subtotal">₱ 1,695.00</span></p>
-                    <p>Total: <span id="confirm-total">₱ 1,695.00</span></p>
+                    <p>Subtotal: <span id="confirm-subtotal">₱ 0.00</span></p>
+                    <p>Total: <span id="confirm-total">₱ 0.00</span></p>
                     <button type="submit">Submit Details</button>
                 </div>
-
             </form>
-
         </div>
     </div>
+<!-- Images -->
+<img src="pics/1.png" alt="Floating image" class="floating-image1">
+<img src="pics/4.png" alt="Floating image" class="floating-image4">
 
-    <!-- Images -->
-    <img src="/cart/pics/1.png" alt="Floating image" class="floating-image1">
-    <img src="/cart/pics/4.png" alt="Floating image" class="floating-image4">
-
-    <img src="/cart/pics/7.png" alt="Floating image" class="floating-image7">
-    <img src="/cart/pics/10.png" alt="Floating image" class="floating-image10">
-
+<img src="pics/7.png" alt="Floating image" class="floating-image7">
+<img src="pics/10.png" alt="Floating image" class="floating-image10">
 
 
+<!-- Footer -->
+<footer>
+<img src="pics/9.png" alt="Floating image" class="floating-image9">
+<img src="pics/13.png" alt="Floating image" class="floating-image13">
+<p>&copy; 2024 Hangout Café. All Rights Reserved.</p>
+</footer>
 
-    <!-- Footer -->
-    <footer>
-        <img src="/cart/pics/9.png" alt="Floating image" class="floating-image9">
-        <img src="/cart/pics/13.png" alt="Floating image" class="floating-image13">
-        <p>&copy; 2024 Hangout Café. All Rights Reserved.</p>
-    </footer>
+    <!-- Script for dynamically loading cart items -->
+    <script src="/cart/scripts.js"></script>
+    <script>
 
-    <script src = /cart/scripts.js></script>
-
+    </script>
 </body>
 </html>
