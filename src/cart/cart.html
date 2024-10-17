@@ -69,7 +69,10 @@
 
         <!-- Right Side: Delivery Form -->
         <div class="details-form">
-            <h2>Delivery</h2>
+            <h2>
+                Delivery
+                <span id="howToOrder" class="how-to-order">How to Order?</span>
+            </h2> 
             <form id="orderForm">
                 <div class="form-group">
                     <input type="text" id="firstName" placeholder="First Name" required>
@@ -83,17 +86,48 @@
                 
                 <input type="hidden" id="branch" value="QC Branch"> <!-- Fixed to only use QC branch -->
                 
+                <!-- Radio Buttons for Pickup or Delivery -->
+                <h2 class="delivery-header">Choose Your Pick Up Method</h2>
+                <div class="delivery-option-container">
+                  <label class="delivery-method">
+                    <input type="radio" name="delivery-method" value="pickup" checked>
+                    <span class="method-title">From Store</span>
+                    <span class="method-description">Personally pick-up from the store.</span>
+                  </label>
+                  <label class="delivery-method">
+                    <input type="radio" name="delivery-method" value="lalamove">
+                    <span class="method-title">Lalamove</span>
+                    <span class="method-description">Book your own Lalamove rider.</span>
+                  </label>
+                </div>
+                
+
                 <div class="map">
                     <img src="/cart/pics/map.png" alt="Map">
                 </div>
                 
                 <div class="confirm">
-                    <p>Subtotal: <span id="confirm-subtotal">₱ 0.00</span></p>
                     <p>Total: <span id="confirm-total">₱ 0.00</span></p>
                     <button type="submit">Submit Details</button>
                 </div>
             </form>
         </div>
+
+        <!-- Modal Structure -->
+        <div id="orderModal" class="modal">
+            <div class="modal-content">  
+                <span id="closeModal" class="close">&times;</span> <!-- Close button -->
+                <!-- Remove all text content and replace it with an image -->
+                <div class="modal-body">
+                    <img src="pics/orderrr.png" alt="Modal Image" class="modal-image">
+                </div>
+                
+                <!-- Keep the footer as it is -->
+
+            </div>
+        </div>
+
+        
     </div>
 <!-- Images -->
 <img src="pics/1.png" alt="Floating image" class="floating-image1">
@@ -113,7 +147,21 @@
     <!-- Script for dynamically loading cart items -->
     <script src="/cart/scripts.js"></script>
     <script>
+        function openModal() {
+            document.getElementById('orderModal').style.display = 'block';
+            document.getElementById('modalOverlay').style.display = 'block'; // Show dark overlay
+            document.getElementById('content').classList.add('blur-background');
+        }
 
+        // Function to close the modal and remove blur
+        document.getElementById('closeModal').onclick = function() {
+            document.getElementById('orderModal').style.display = 'none';
+            document.getElementById('modalOverlay').style.display = 'none'; // Hide dark overlay
+            document.getElementById('content').classList.remove('blur-background');
+        };
+
+        // Call openModal() function when you want to display the modal (e.g., button click).
+        // openModal();
     </script>
 </body>
 </html>

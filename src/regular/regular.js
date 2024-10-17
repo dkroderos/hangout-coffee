@@ -49,9 +49,7 @@ function addToCart(item) {
     
     if (existingItem) {
         existingItem.quantity += quantity;
-        existingItem.price += cost;
     } else {
-        item.price = cost;
         cart.push({ ...item, quantity }); 
     }
 
