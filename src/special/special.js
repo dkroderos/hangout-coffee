@@ -12,11 +12,11 @@ function setupAddToCartButtons() {
             const grandParent = this.parentElement.parentElement;
             const parent = this.parentElement;
 
-            const name = grandParent.querySelector('h3').innerText;
-            const ounce = parent.querySelector('span:nth-child(1)').innerText;
-            const price = parent.querySelector('span:nth-child(2)').innerText;
+            const name = grandParent.querySelector('.details h2').innerText;
+            const ounce = parent.querySelector('p:nth-child(1)').innerText;
+            const price = parent.querySelector('p:nth-child(2)').innerText;
 
-            const itemName = name + ` (${ounce})`; //Strawberry Cheesecake (22oz)
+            const itemName = name + ` (${ounce})`;
             const itemPrice = parseFloat(price.replace('₱', ''));
 
             const item = {
@@ -63,7 +63,7 @@ function addToCart(item) {
 
 // Get current cart from localStorage
 function getCart() {
-    let cart = localStorage.getItem("cartSpecial");
+    let cart = localStorage.getItem("cart");
     if (cart) {
         return JSON.parse(cart);
     } else {
@@ -73,7 +73,7 @@ function getCart() {
 
 // Save the cart to localStorage
 function saveCart(cart) {
-    localStorage.setItem("cartSpecial", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount(getCart());
 }
 
