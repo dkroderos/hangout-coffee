@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -84,6 +83,7 @@ nav .menu li a {
     max-width: 1300px;
     max-height: 100%;
     margin: 0 auto;
+    position: relative;
 
 }
 
@@ -263,6 +263,180 @@ textarea {
     margin-bottom: 15px;
 }
 
+.blur-background {
+    filter: blur(15px);
+    pointer-events: none;
+    transition: filter 0.3s ease;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+}
+
+
+.modal-image {
+    display: block;
+    max-width: 100%; /* Ensure the image fits within the modal */
+    width: 80%; /* Full width */
+    height: 80%;
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 10px; /* Optional: add rounded corners */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-body {
+    text-align: center;
+    margin: 20px 0; /* Add space around the image */
+}
+
+.modal-content {
+    background-color: #FDF8ED;
+    margin: 35px auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.how-to-order {
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    float: right; /* Position to the right */
+    margin-left: 10px; /* Space between title and text */
+    font-size: 1rem; /* Smaller size for less prominence */
+    text-decoration: underline; /* Underline the text */
+    margin-top: 5px; /* Adjust this value to lower the text */
+}
+
+
+/* Modal Footer */
+.modal-footer {
+    text-align: center; /* Center the content */
+    margin-top: 20px; /* Space above the button */
+}
+
+.modal-header {
+    text-align: center; /* Center the text */
+    background-color: #E1D9CF;
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+.order-btn {
+    background-color: #081A48; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.order-btn:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style for Radio Buttons */
+/* Header Style */
+.delivery-header {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #081A48;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Container for delivery options */
+.delivery-option-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+/* Delivery Method Styling */
+.delivery-method {
+    display: block;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Highlight when option is hovered or selected */
+.delivery-method:hover, .delivery-method input[type="radio"]:checked + .method-title {
+    border-color: #081A48;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep the hover style when clicked (checked state) */
+.delivery-method.checked {
+    border-color: #081A48; /* Keep hover color when clicked */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Keep shadow when clicked */
+}
+
+/* Method Title Style */
+.method-title {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Method Description Style */
+.method-description {
+    display: block;
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 400;
+}
+
+/* Radio Button Style */
+.delivery-method input[type="radio"] {
+    display: none;
+}
+
+.delivery-method input[type="radio"]:checked + .method-title {
+    color: #081A48; /* Orange color for selected option */
+}
+
 /* Confirm Section */
 .confirm {
     text-align: right;
@@ -376,7 +550,7 @@ footer {
     right: 50px; /* Distance from the right of the page */
     width: 150px; /* Set the width of the image */
     height: auto; /* Keep the aspect ratio */
-    z-index: 1000; /* Ensures it appears on top of other elements */
+    z-index: 1; /* Ensures it appears on top of other elements */
 }
 
 .floating-image2 {
@@ -385,7 +559,7 @@ footer {
     right: 10px; /* Distance from the right of the page */
     width: 150px; /* Set the width of the image */
     height: auto; /* Keep the aspect ratio */
-    z-index: 1000; /* Ensures it appears on top of other elements */
+    z-index: 1; /* Ensures it appears on top of other elements */
 }
 
 .floating-image3 {
@@ -394,7 +568,7 @@ footer {
     right: 20px; /* Distance from the right of the page */
     width: 150px; /* Set the width of the image */
     height: auto; /* Keep the aspect ratio */
-    z-index: 1000; /* Ensures it appears on top of other elements */
+    z-index: 1; /* Ensures it appears on top of other elements */
 }
 
 .floating-image4 {
@@ -403,7 +577,7 @@ footer {
     right: 1%; /* Distance from the right of the page */
     width: 180px; /* Set the width of the image */
     height: auto; /* Keep the aspect ratio */
-    z-index: 1000; /* Ensures it appears on top of other elements */
+    z-index: 1; /* Ensures it appears on top of other elements */
     opacity: 0.15; /* 70% opacity */
 }
 
@@ -487,4 +661,3 @@ footer {
     height: auto; /* Keep the aspect ratio */
     z-index: 1; /* Ensures it appears on top of other elements */
 }
-
