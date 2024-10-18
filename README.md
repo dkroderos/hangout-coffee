@@ -1,5 +1,4 @@
-#BADING SI RONAN
-
+# BADING SI RONAN
 
 ### Running the Application
 
@@ -13,6 +12,13 @@ npm install
 
 ```
 npm run dev
+```
+
+### Production Run PARA MABILIS UI
+
+```
+npm install
+npm start
 ```
 
 ### If using Docker
