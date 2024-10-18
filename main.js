@@ -33,13 +33,6 @@ app.get("/special", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "special", "special.html"));
 });
 
-// Pag iaadd niyo yung cart lagay niyo lahat ng files sa /src/cart/ na folder
-// Lahat ng <tag src=""> or <tag href=""> niyo simulan niyo sa "/cart"
-// Example: <img src="/cart/cart.png"></img>
-// Hindi <img src="./cart.png"></img>"
-
-// Pag naadd niyo na yung cart uncomment niyo to:
-
 app.get("/cart", (req, res) => {
   res.sendFile(path.join(__dirname, "src", "cart", "cart.html"));
 });
@@ -48,7 +41,7 @@ app.use((req, res) => {
   res.redirect("/");
 });
 
-const port = 4264;
+const port = 3000;
 
 const getIPAddress = () => {
   const interfaces = os.networkInterfaces();

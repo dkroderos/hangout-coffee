@@ -205,7 +205,9 @@ function populateCartPage(cart) {
       .replace(/\s+/g, "_")}.png" alt="${
       item.name
     }" style="margin-right:-10%; background-color: #FDF8ED;">`;
-    const itemDetails = `<span class="o-details"><p>${item.name}</p></span>`;
+    const itemDetails = `<span class="o-details"><p>${item.name} ${
+      item.type ? `(${item.type})` : ""
+    }</p></span>`;
     const redCircle = `<span id="span1" style="position: absolute; cursor: pointer;" class="red-circle">&times;</span>`;
     const itemPrice = `<span class="o-price"><p id="price-${index}">₱ ${item.price.toFixed(
       2

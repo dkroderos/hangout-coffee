@@ -1,308 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hangout Café</title>
-    <link rel="stylesheet" href="/coffee/coffee.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      h1 {
-        font-family: "Lobster", cursive;
-        font-size: 80px;
-      }
-    </style>
-    <style>
-      body {
-        background-image: url("/coffee/Photos/marble.jpeg"); /* Replace with your image path */
-        background-attachment: fixed; /* Fixed background while scrolling */
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- HEADER TAB -->
-    <header>
-      <nav>
-        <div class="logo">
-          <img src="/coffee/Photos/Logo_hangout.png" alt="Hangout Café" />
-          <span>Hangout Café</span>
-        </div>
-        <ul class="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/coffee">Coffee</a></li>
-          <li><a href="/regular">Regular Drinks</a></li>
-          <li><a href="/food">Food</a></li>
-          <li><a href="/special">Special Drinks</a></li>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangout Café</title>
+  <link rel="stylesheet" href="coffee.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-image: url("./pics/bgcoffee.jpg");
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER TAB -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/cart/pics/logo.png" alt="Hangout Café">
+        <span>Hangout Café</span>
+      </div>
+
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/coffee">Coffee</a></li>
+        <li><a href="/regular">Regular Drinks</a></li>
+        <li><a href="/food">Food</a></li>
+        <li><a href="/special">Special Drinks</a></li>
+        <a href="/cart" style="text-decoration: none;  display: flex;">
           <span class="cart-icon">
-            <img
-              src="/coffee/Photos/cart.png"
-              class="color-tinted"
-              alt="Cart"
-            />
+            <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
           </span>
-        </ul>
-      </nav>
-    </header>
+          <span id="cart-count" style="color: black;"></span>
+        </a>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- STYLING (CSS) FOR CAROUSEL -->
-    <style>
-      .carousel {
-        position: relative;
-        display: flex;
-        overflow: hidden;
-        width: 100%;
-        height: 400px; /* HEIGHT PREFERENCES */
-      }
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Coffee</h1>
+    </div>
+  </section>
 
-      .carousel-item {
-        min-width: 100%;
-        transition: transform 1s ease-in-out;
-      }
+  <!-- HOT DRINKS TAB -->
+  <section class="coffee-menu">
+    <h2>Hot Drinks</h2>
+    <div class="menu-items">
 
-      .carousel img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    </style>
 
-    <!-- AUTO-SLIDING -->
-    <script>
-      let currentIndex = 0;
-      const items = document.querySelectorAll(".carousel-item");
-
-      function showNextImage() {
-        items[currentIndex].style.transform = "translateX(-100%)";
-        currentIndex = (currentIndex + 1) % items.length;
-        items[currentIndex].style.transform = "translateX(0)";
-      }
-
-      setInterval(showNextImage, 3000); // AUTOSLIDE TIMEFRAME -3000 = 3 seconds
-    </script>
-
-    <section class="banner">
-      <div class="banner-content">
-        <h1>Coffee</h1>
-        <ul class="categories">
-          <li>Hot Drinks &nbsp;</li>
-          <li>Iced Drinks</li>
-          <li>Blended Coffee</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- HOT DRINKS TAB -->
-    <section class="coffee-menu">
-      <h2>Hot Drinks</h2>
-      <div class="menu-items">
-        <div class="item">
-          <h3>CAFE AMERICANO</h3>
-          <hr />
-          <p>₱105.00 12oz &nbsp;</p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>CAFE LATTE</h3>
-          <hr />
-          <p>₱115.00 12oz &nbsp;</p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>CAFE MOCHA</h3>
-          <hr />
-          <p>₱115.00 12oz &nbsp;</p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>CAPPUCINO</h3>
-          <hr />
-          <p>12oz &nbsp; ₱115.00</p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>CARAMEL MACCHIATO</h3>
-          <hr />
-          <p>12oz &nbsp; ₱125.00</p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>MATCHA LATTE</h3>
-          <hr />
-          <p>12oz &nbsp; ₱125.00</p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ICED DRINKS TAB -->
-    <section class="coffee-menu">
-      <h2>Iced Drinks</h2>
-      <div class="menu-items">
-        <div class="item">
-          <h3>ICED AMERICANO</h3>
-          <hr />
-          <div class="sizes">
-            <p>
-              16oz &nbsp; ₱125.00<br />
-              22oz &nbsp; ₱145.00
-            </p>
+      <div class="item">
+        <h3>CAFE AMERICANO</h3>
+        <hr />
+        <img src="./pics/cafe_americano.png" alt="Cafe Americano" class="coffee-image"
+          style="width: 300px; height: 250px;">
+        <div class="item-details">
+          <div class="size-price">
+            <p class="size">12oz</p>
+            <p class="price">₱105.00</p>
+            <button class="add-to-cart">Add to cart</button>
           </div>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-
-        <div class="item">
-          <h3>ICED LATTE</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱130.00<br />
-            22oz &nbsp; ₱150.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-
-        <div class="item">
-          <h3>ICED MOCHA</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-
-        <div class="item">
-          <h3>ICED WHITE CHOCOLATE</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-
-        <div class="item">
-          <h3>ICED TOFFEE JELLY</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-
-        <div class="item">
-          <h3>ICED CARAMEL MACCHIATO</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-
-        <div class="item">
-          <h3>ICED MATCHA GREEN TEA</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- BLENDED COFFEE SECTION -->
-    <section class="coffee-menu">
-      <h2>Blended Coffee</h2>
-      <div class="menu-items">
-        <div class="item">
-          <h3>TOFFEE JELLY</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>WHITE CHOCOLATE</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>HAZELNUT</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱140.00<br />
-            22oz &nbsp; ₱160.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>CARAMEL COFFEE JELLY</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱150.00<br />
-            22oz &nbsp; ₱170.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
-        </div>
-        <div class="item">
-          <h3>CHOCOLATE OVERLOAD</h3>
-          <hr />
-          <p>
-            16oz &nbsp; ₱150.00<br />
-            22oz &nbsp; ₱170.00
-          </p>
-          <button class="add-to-cart">Add to cart</button>
         </div>
       </div>
 
-      <!-- FOOTER TAB -->
+      <div class="item">
+        <h3>CAFE LATTE</h3>
+        <hr />
+        <img src="./pics/cafe_latte.jpg" alt="Cafe Latte" class="coffee-image" style="width: 300px; height: 250px;">
+        <div class="item-details">
+          <div class="size-price">
+            <p class="size">12oz</p>
+            <p class="price">₱115.00</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>CAFE MOCHA<img src="./pics/best-seller.jpg" style="width: 30px; height: 30px;" alt="Best Seller"></h3>
+        <hr />
+        <img src="./pics/cafe_mocha.png" alt="Cafe Mocha" class="coffee-image" style="width: 300px; height: 250px;">
+        <div class="item-details">
+          <div class="size-price">
+            <p class="size">12oz</p>
+            <p class="price">₱115.00</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>CAPPUCINO</h3>
+        <hr />
+        <img src="./pics/cappucino.png" alt="Cappuccino" class="coffee-image" style="width: 300px; height: 250px;">
+        <div class="item-details">
+          <div class="size-price">
+            <p class="size">12oz</p>
+            <p class="price">₱115.00</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>CARAMEL MACCHIATO<img src="./pics/best-seller.jpg" style="width: 30px; height: 30px;" alt="Best Seller">
+        </h3>
+        <hr />
+        <img src="./pics/caramel_macchiato.jpg" alt="Caramel Macchiato" class="coffee-image"
+          style="width: 300px; height: 250px;">
+        <div class="item-details">
+          <div class="size-price">
+            <p class="size">12oz</p>
+            <p class="price">₱125.00</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>MATCHA LATTE</h3>
+        <hr />
+        <img src="./pics/matcha_latte.jpg" alt="Matcha Latte" class="coffee-image" style="width: 300px; height: 250px;">
+        <div class="item-details">
+          <div class="size-price">
+            <p class="size">12oz</p>
+            <p class="price">₱125.00</p>
+            <button class="add-to-cart">Add to cart</button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <!-- ICED DRINKS TAB -->
+      <section class="coffee-menu">
+        <h2>Iced Drinks</h2>
+        <div class="menu-items">
+
+          <div class="item">
+            <h3>ICED AMERICANO</h3>
+            <hr />
+            <img src="pics/iced_americano.png" alt="Okinawa" class="coffee-image" style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱125.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱145.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="item">
+            <h3>ICED LATTE</h3>
+            <hr />
+            <img src="./pics/iced_latte.png" alt="Iced Latte" class="coffee-image" style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱130.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱150.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="item">
+            <h3>ICED MOCHA<img src="./pics/best-seller.jpg" style="width: 30px; height: 30px;" alt="Best Seller"></h3>
+            <hr />
+            <img src="./pics/iced_mocha.png" alt="Iced Mocha" class="coffee-image" style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="item">
+            <h3>ICED WHITE CHOCOLATE</h3>
+            <hr />
+            <img src="./pics/iced_white_chocolate.png" alt="Iced White Chocolate" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>ICED TOFFEE JELLY</h3>
+            <hr />
+            <img src="./pics/iced_toffee_jelly.png" alt="Iced Toffee Jelly" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>ICED CARAMEL MACCHIATO<img src="./pics/best-seller.jpg" style="width: 30px; height: 30px;"
+                alt="Best Seller"></h3>
+            <hr />
+            <img src="./pics/iced_caramel_macchiato.png" alt="Iced Caramel Macchiato" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>ICED MATCHA GREEN TEA</h3>
+            <hr />
+            <img src="./pics/iced_matcha_green_tea.png" alt="Iced Matcha Green Tea" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+      </section>
+
+
+
+
+      <!-- BLENDED COFFEE SECTION -->
+      <section class="coffee-menu">
+        <h2>Blended Coffee</h2>
+        <div class="menu-items">
+
+          <div class="item">
+            <h3>TOFFEE JELLY</h3>
+            <hr />
+            <img src="./pics/toffe_jelly.png" alt="Toffee Jelly" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>WHITE CHOCOLATE</h3>
+            <hr />
+            <img src="./pics/white_chocolate.png" alt="White Chocolate" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>HAZELNUT</h3>
+            <hr />
+            <img src="./pics/hazelnut.png" alt="Hazelnut" class="coffee-image" style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱140.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱160.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>CARAMEL COFFEE JELLY<img src="./pics/best-seller.jpg" style="width: 30px; height: 30px;"
+                alt="Best Seller"></h3>
+            <hr />
+            <img src="./pics/caramel_coffee_jelly.png" alt="Caramel Coffee Jelly" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱150.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱170.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <h3>CHOCOLATE OVERLOAD</h3>
+            <hr />
+            <img src="./pics/chocolate_overload.png" alt="Chocolate Overload" class="coffee-image"
+              style="width: 145px; height: auto;">
+            <div class="item-details">
+              <div class="size-price">
+                <p class="size">16oz</p>
+                <p class="price">₱150.00</p>
+                <button class="add-to-cart">Add to cart - 16oz</button>
+              </div>
+              <div class="size-price">
+                <p class="size">22oz</p>
+                <p class="price">₱170.00</p>
+                <button class="add-to-cart">Add to cart - 22oz</button>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+      <!-- Footer Section -->
       <footer>
         <div class="footer-content">
-          <p>© 2024 Hangout Café. All Rights Reserved.</p>
+          <p>© Hangout Café. All Rights Reserved.</p>
         </div>
       </footer>
 
-      <!-- CSS STYLING FOR FOOTER AND BG -->
+      <!-- Add this CSS for styling the footer and background -->
       <style>
-        footer {
-          background-color: #2f2a75; /* BLUE PALETTE TO MATCH THE VIBES OF LOGO */
-          color: white;
-          text-align: center;
-          padding: 20px 0;
-          position: fixed;
-          width: 100%;
-          bottom: 0;
-          left: 0;
-        }
-
-        footer p {
-          margin: 0;
-          font-family: "Poppins", sans-serif;
-          font-weight: 500;
-          font-size: 16px;
-        }
-
+        /* General body styles */
         body {
           margin: 0;
-          padding-bottom: 60px; /* Adjust depending on footer height */
+          padding-bottom: 60px;
+          /* Adjust this value based on your footer height */
+          font-family: "Poppins", sans-serif;
+          /* Set the default font for the body */
+        }
+
+        /* Footer styles */
+        footer {
+          background-color: #2f2a75;
+          /* Blue color for the footer */
+          color: white;
+          /* Text color for the footer */
+          text-align: center;
+          /* Center the text in the footer */
+          padding: 20px 0;
+          /* Vertical padding for the footer */
+          position: fixed;
+          /* Fix the footer to the bottom of the viewport */
+          width: 100%;
+          /* Make the footer span the entire width of the viewport */
+          bottom: 0;
+          /* Position the footer at the bottom */
+          left: 0;
+          /* Align the footer to the left */
+          box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+          /* Optional shadow for better visibility */
+        }
+
+        /* Paragraph styles within the footer */
+        footer p {
+          margin: 0;
+          /* Remove default margin */
+          font-weight: 500;
+          /* Medium font weight */
+          font-size: 16px;
+          /* Font size for footer text */
         }
       </style>
-    </section>
-    
-    <script src="/coffee/scripts.js"></script> <!-- Add your script file here -->
-  </body>
+
+      <script src="scripts.js"></script>
+
 </html>

@@ -1,51 +1,32 @@
-const coffeeItems = [
-  [
-    {
-      name: "CAFE AMERICANO",
-      price: 105.0,
-    },
-    {
-      name: "CAFE LATTE",
-      price: 115.0,
-    },
-    {
-      name: "CAFE MOCHA",
-      price: 115.0,
-    },
-    {
-      name: "CAPPUCINO",
-      price: 115.0,
-    },
-    {
-      name: "CARAMEL MACCHIATO",
-      price: 125.0,
-    },
-    {
-      name: "MATCHA LATTE",
-      price: 125.0,
-    },
-  ],
-];
-
 document.addEventListener("DOMContentLoaded", function () {
   setupAddToCartButtons();
   updateCartCount(getCart());
 });
 
-// Handle the "Add to Cart" button click
 function setupAddToCartButtons() {
   const buttons = document.querySelectorAll(".add-to-cart");
 
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
+      const grandgrandParent = this.parentElement.parentElement.parentElement;
       const parent = this.parentElement;
-      const name = parent.querySelector("h3").innerText;
-      const priceText = parent.querySelector("p").innerText;
-      const price = parseFloat(priceText.replace("₱", "").trim());
+
+      // Change from selecting 'h3' directly to using 'querySelector' for the product name
+      const name = grandgrandParent.querySelector("h3").innerText;
+
+      // Select the first and second 'p' elements for size and price
+      const ounce = parent.querySelector("p:nth-child(1)").innerText;
+      const price = parent.querySelector("p:nth-child(2)").innerText;
+
+      // Separate the item name from the ounce
+      const itemName = name; // Only the name without ounces
+      const itemType = ounce; // Keep the ounce for separate storage
+      const itemPrice = parseFloat(price.replace("₱", ""));
 
       const item = {
-        name: name,
-        price: price,
+        name: itemName,
+        type: itemType, // Store the ounce separately
+        price: itemPrice,
       };
 
       addToCart(item);
@@ -53,16 +34,14 @@ function setupAddToCartButtons() {
   });
 }
 
-// Add to cart function
 function addToCart(item) {
-  // console.log(item);
   let quantity = prompt(
-    "How many of " + item.name + " would you like to add?",
+    "How many of " + item.name + " (" + item.type + ") would you like to add?",
     "1"
   );
 
   if (quantity === null) {
-    // Cancelled
+    // If the user cancels the prompt
     return;
   }
 
@@ -74,22 +53,33 @@ function addToCart(item) {
   }
 
   let cart = getCart();
-  const existingItem = cart.find((cartItem) => cartItem.name === item.name);
-  const cost = item.price * quantity;
+  const existingItem = cart.find(
+    (cartItem) => cartItem.name === item.name && cartItem.type === item.type
+  );
+  const totalCost = item.price * quantity; // Calculate total cost
 
   if (existingItem) {
-    existingItem.quantity += quantity; // Update quantity
-    // existingItem.price += cost; // Update total price
+    existingItem.quantity += quantity; // Increase quantity for existing item
   } else {
-    // item.price = cost; // Set price for the new item
-    cart.push({ ...item, quantity });
+    cart.push({
+      ...item,
+      quantity: quantity,
+    });
   }
 
   saveCart(cart);
-  alert(quantity + " of " + item.name + " added to cart! \nCost: ₱ " + cost);
+  alert(
+    quantity +
+      " of " +
+      item.name +
+      " (" +
+      item.type +
+      ") added to cart! \nCost: ₱ " +
+      totalCost
+  );
 }
 
-// Get current cart from localStorage
+// Get the current cart from localStorage
 function getCart() {
   let cart = localStorage.getItem("cart");
   if (cart) {
@@ -102,13 +92,12 @@ function getCart() {
 // Save the cart to localStorage
 function saveCart(cart) {
   localStorage.setItem("cart", JSON.stringify(cart));
-  updateCartCount(cart);
+  updateCartCount(getCart());
 }
 
 // Update the cart count in the HTML
 function updateCartCount(cart) {
-  const cartCountElement =
-    document.querySelector(".cart-icon span") || document.createElement("span");
+  const cartCountElement = document.getElementById("cart-count");
 
   let totalQuantity = 0;
   cart.forEach((item) => {
@@ -116,7 +105,4 @@ function updateCartCount(cart) {
   });
 
   cartCountElement.innerText = totalQuantity;
-  if (!document.querySelector(".cart-icon span")) {
-    document.querySelector(".cart-icon").appendChild(cartCountElement);
-  }
 }
