@@ -12,15 +12,17 @@ function setupAddToCartButtons() {
             const grandParent = this.parentElement.parentElement;
             const parent = this.parentElement;
 
-            const name = grandParent.querySelector('.details h2').innerText;
+            const name = grandParent.querySelector('.details h3').innerText;
             const ounce = parent.querySelector('p:nth-child(1)').innerText;
             const price = parent.querySelector('p:nth-child(2)').innerText;
 
-            const itemName = name + ` (${ounce})`;
+            const itemName = name;
+            const itemType = ounce;
             const itemPrice = parseFloat(price.replace('₱', ''));
 
             const item = {
                 name: itemName,
+                type: itemType,
                 price: itemPrice
             };
 
@@ -31,7 +33,7 @@ function setupAddToCartButtons() {
 
 //Add to cart function
 function addToCart(item) {
-    let quantity = prompt("How many of " + item.name + " would you like to add?", "1");
+    let quantity = prompt("How many of " + item.name + " (" + item.type +  ") would you like to add?", "1");
     
     if (quantity === null) {//canceled
         return; 
@@ -45,7 +47,7 @@ function addToCart(item) {
     }
     
     let cart = getCart();
-    const existingItem = cart.find(cartItem => cartItem.name === item.name);
+    const existingItem = cart.find(cartItem => cartItem.name === item.name && cartItem.type === item.type);
     const cost = item.price * quantity;
     
     if (existingItem) {
@@ -55,7 +57,7 @@ function addToCart(item) {
     }
 
     saveCart(cart);
-    alert(quantity + " of " + item.name + " added to cart! \nCost: ₱ " + cost.toFixed(2));
+    alert(quantity + " of " + item.name + " (" + item.type +  ") added to cart! \nCost: ₱ " + cost.toFixed(2));
 }
 
 
