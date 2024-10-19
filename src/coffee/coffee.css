@@ -1,19 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 
 html {
   height: 100%;
-  
 }
 
 body {
   font-family: Poppins;
-  background-color: #FDF8ED;
-  color: #081A48;
-  
+  background-color: #fdf8ed;
+  color: #081a48;
 }
 
 a {
@@ -27,7 +24,7 @@ a {
   font-style: normal;
 }
 header {
-  background-color: #E1D9CF;
+  background-color: #e1d9cf;
   padding: 15px 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -67,7 +64,7 @@ nav .menu li {
 }
 
 nav .menu li a {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -87,7 +84,7 @@ nav .menu li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #081A48;
+  color: #081a48;
   text-align: center;
   position: relative;
 }
@@ -190,13 +187,12 @@ footer p {
   font-size: 16px;
 }
 
-
 ::-webkit-scrollbar {
   width: 12px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
-  background: #E1D9CF; /* Background of the scrollbar track */
+  background: #e1d9cf; /* Background of the scrollbar track */
   border-radius: 10px; /* Roundness of the track */
 }
 

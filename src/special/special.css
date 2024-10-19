@@ -1,5 +1,3 @@
-
-
 a {
   text-decoration: none;
   color: inherit;
@@ -8,8 +6,7 @@ a {
 /* NAVBAR */
 
 header {
-  
-  background-color: #E1D9CF;
+  background-color: #e1d9cf;
   padding: 15px 30px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
@@ -49,7 +46,7 @@ nav .menu li {
 }
 
 nav .menu li a {
-  font-size: 1.20rem;
+  font-size: 1.2rem;
   font-weight: 500;
 }
 
@@ -75,7 +72,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -84,7 +81,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 
 /* SECTION STYLES*/
 .section-1 {
@@ -99,12 +95,12 @@ body {
   background-repeat: no-repeat;
 }
 
-.section-header{
+.section-header {
   width: fit-content;
 }
 
- .section-header h1 {
-  font-family: 'Lobster';
+.section-header h1 {
+  font-family: "Lobster";
   font-style: normal;
   font-size: 100px;
   color: #081a48;
@@ -112,87 +108,83 @@ body {
   padding-bottom: 5px;
   text-align: center;
   white-space: nowrap;
-  transition: text-shadow 0.2s ease ;
- }
+  transition: text-shadow 0.2s ease;
+}
 
- .section-header h1:hover {
+.section-header h1:hover {
   text-shadow: 2px 2px 5px #ffc445;
 }
 
-
- .section-text1 {
-  font-family: 'Poppins', sans-serif;
+.section-text1 {
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-size: 26px;
   text-align: center;
   color: #081a48;
   width: 100%;
   background-color: rgba(240, 248, 255, 0.424);
- }
+}
 
- .section-text1 a {
+.section-text1 a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
   transition: text-shadow 0.2s ease;
-
 }
 
 .section-text1 a:hover {
   text-shadow: 2px 2px 5px #ffc445;
 }
 
-
 .section-2 {
   display: flex;
   flex-direction: column;
-  background-image: url('specialdrinks_pics/bg.png');
-  background-size: cover; 
-  background-position: center; 
+  background-image: url("specialdrinks_pics/bg.png");
+  background-size: cover;
+  background-position: center;
 }
 
-.section-2_1{
+.section-2_1 {
   margin-top: 3.5%;
-  padding: 15px; 
+  padding: 15px;
   position: relative;
 }
 
 .section-2 h1 {
-   font-family: 'Poppins', sans-serif;
-   font-style: normal;
-   position: absolute;
-   font-size: 23px;
-   font-weight: bold;
-   text-align: start;
-   letter-spacing: 1px;
-   left: 1%;
-   color: #081a48;
-   background-image: url('specialdrinks_pics/bg2.png');
-   background-size: cover; 
-   background-position: center; 
-   padding: 10px;
-   display: inline-block; 
-   border-bottom: 4px solid #000000; 
-   width: 400px; 
-   padding-bottom: 10px;
-   margin-bottom: 5%;
-   
-  }
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  position: absolute;
+  font-size: 23px;
+  font-weight: bold;
+  text-align: start;
+  letter-spacing: 1px;
+  left: 1%;
+  color: #081a48;
+  background-image: url("specialdrinks_pics/bg2.png");
+  background-size: cover;
+  background-position: center;
+  padding: 10px;
+  display: inline-block;
+  border-bottom: 4px solid #000000;
+  width: 400px;
+  padding-bottom: 10px;
+  margin-bottom: 5%;
+}
 
 .section-2_1 h1 {
   top: 0;
 }
 
 /* CONTAINER STYLES*/
-.container{
-  display: flex; 
+.container {
+  display: flex;
   justify-content: center;
-  gap: 2%; 
-  position: relative; 
-  top: 1%; 
+  gap: 2%;
+  position: relative;
+  top: 1%;
 }
 
-.card-container{
+.card-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -202,7 +194,7 @@ body {
 }
 
 /* CARD STYLES*/
-.card{
+.card {
   position: relative;
   display: flex;
   width: 410px;
@@ -213,12 +205,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover{
+.card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
-.card-content{
+.card-content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -233,28 +225,28 @@ body {
   transition: transform 0.3s ease;
 }
 
-.card-content img:hover{
+.card-content img:hover {
   transform: translateY(-10px);
 }
 
 /* CARD DETAIL STYLES */
 
-.card-details{
+.card-details {
   display: inline;
   flex: 1;
   color: white;
 }
 
-.card-details h3{
+.card-details h3 {
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 8px;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.card-details h3:hover{
+.card-details h3:hover {
   transform: translateY(-10px);
   color: #ffc445;
 }
@@ -282,11 +274,10 @@ body {
   border: none;
   padding: 5px 15px;
   border-radius: 20px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-
 }
 
 .add-to-cart:hover {
@@ -300,20 +291,19 @@ body {
   z-index: 10;
 }
 
-.best-seller img{
+.best-seller img {
   width: 55px;
 }
 
-
 /* FOOTER STYLES */
-.bottom-bar{
+.bottom-bar {
   background: #081a48;
   text-align: center;
-  padding: 15px 0;   
+  padding: 15px 0;
 }
 
 .bottom-bar p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: rgb(255, 255, 255);
   margin: 0;
   font-size: 18px;
@@ -321,78 +311,92 @@ body {
   padding: 2px;
 }
 
-
 /* Responsive styles */
 @media (max-width: 1200px) {
   .section-1 h1 {
-      font-size: 70px;
-      left: 25%;
+    font-size: 70px;
+    left: 25%;
   }
   .section-text1 {
-      font-size: 22px;
-      top: 75%;
+    font-size: 22px;
+    top: 75%;
   }
-  .container-1, .container-2 {
-      gap: 40px;
+  .container-1,
+  .container-2 {
+    gap: 40px;
   }
-  .card-1, .card-2, .card-3, .card-4, .custom-card {
-      width: 200px;
-      height: 110px;
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .custom-card {
+    width: 200px;
+    height: 110px;
   }
   .custom-card {
-      height: 130px; 
+    height: 130px;
   }
 }
 
 @media (max-width: 768px) {
   .section-1 h1 {
-      font-size: 50px;
-      left: 20%;
-      top: 15%;
+    font-size: 50px;
+    left: 20%;
+    top: 15%;
   }
   .section-text1 {
-      font-size: 18px;
-      top: 72%;
+    font-size: 18px;
+    top: 72%;
   }
-  .container-1, .container-2 {
-      flex-direction: column;
-      gap: 30px;
-      left: 0;
-      top: 10%;
+  .container-1,
+  .container-2 {
+    flex-direction: column;
+    gap: 30px;
+    left: 0;
+    top: 10%;
   }
-  .card-1, .card-2, .card-3, .card-4, .custom-card {
-      width: 160px;
-      height: 90px;
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .custom-card {
+    width: 160px;
+    height: 90px;
   }
   .custom-card {
-      height: 110px; 
+    height: 110px;
   }
 }
 
 @media (max-width: 480px) {
   .section-1 h1 {
-      font-size: 35px;
-      left: 10%;
-      top: 12%;
+    font-size: 35px;
+    left: 10%;
+    top: 12%;
   }
   .section-text1 {
-      font-size: 16px;
-      top: 68%;
+    font-size: 16px;
+    top: 68%;
   }
-  .container-1, .container-2 {
-      gap: 20px;
-      top: 15%;
+  .container-1,
+  .container-2 {
+    gap: 20px;
+    top: 15%;
   }
-  .card-1, .card-2, .card-3, .card-4, .custom-card {
-      width: 140px;
-      height: 80px;
+  .card-1,
+  .card-2,
+  .card-3,
+  .card-4,
+  .custom-card {
+    width: 140px;
+    height: 80px;
   }
   .custom-card {
-      height: 100px; 
+    height: 100px;
   }
   .add-to-cart {
-      font-size: 10px;
-      padding: 3px 10px;
+    font-size: 10px;
+    padding: 3px 10px;
   }
 }
 
@@ -401,7 +405,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #E1D9CF; /* Background of the scrollbar track */
+  background: #e1d9cf; /* Background of the scrollbar track */
   border-radius: 10px; /* Roundness of the track */
 }
 
@@ -414,6 +418,5 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555; /* Thumb color on hover */
 }
-
 
 /* END MAIN */

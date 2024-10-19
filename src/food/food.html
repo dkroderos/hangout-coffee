@@ -1,253 +1,275 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangout Café</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="food.css">
-    <style>
-        h1 {
-            font-family: 'Lobster', cursive;
-            font-size: 200px;
-        }
-    </style>
 
-    <style>
-        body {
-            background-image: url('Photos/marble.jpg'); /* Updated to relative path */
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed; /* Fixed background while scrolling */
-            background-position: center;
-        }
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hangout Café</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="food.css">
+  <style>
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 200px;
+    }
+  </style>
+
+  <style>
+    body {
+      background-image: url('Photos/marble.jpg');
+      /* Updated to relative path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      /* Fixed background while scrolling */
+      background-position: center;
+    }
+  </style>
 
 </head>
+
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-          <div class="logo">
-              <img src="/cart/pics/logo.png" alt="Hangout Café">
-              <span>Hangout Café</span>
-          </div>
-            
-            <ul class="menu">
-            <li><a href="/">Home</a></li>
-            <li><a href="/coffee">Coffee</a></li>
-            <li><a href="/regular">Regular Drinks</a></li>
-            <li><a href="/food">Food</a></li>
-            <li><a href="/special">Special Drinks</a></li>
-            <a href="/cart" style="text-decoration: none;  display: flex;">
-              <span class="cart-icon">
-                  <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
-              </span>
-              <span id="cart-count" style="color: black;"></span>
-            </a>
-            </ul>
-        </nav>
-    </header>
+  <!-- Header Section -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/cart/pics/logo.png" alt="Hangout Café">
+        <span>Hangout Café</span>
+      </div>
 
-    <!-- Add a basic script for auto sliding (optional) -->
-    <script>
-        let currentIndex = 0;
-        const items = document.querySelectorAll('.carousel-item');
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/coffee">Coffee</a></li>
+        <li><a href="/regular">Regular Drinks</a></li>
+        <li><a href="/food">Food</a></li>
+        <li><a href="/special">Special Drinks</a></li>
+        <a href="/cart" style="text-decoration: none;  display: flex;">
+          <span class="cart-icon">
+            <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
+          </span>
+          <span id="cart-count" style="color: black;"></span>
+        </a>
+      </ul>
+    </nav>
+  </header>
 
-        function showNextImage() {
-            items[currentIndex].style.transform = 'translateX(-100%)';
-            currentIndex = (currentIndex + 1) % items.length;
-            items[currentIndex].style.transform = 'translateX(0)';
-        }
+  <!-- Add a basic script for auto sliding (optional) -->
+  <script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
 
-        setInterval(showNextImage, 3000); // Auto-slide every 3 seconds
-    </script>
+    function showNextImage() {
+      items[currentIndex].style.transform = 'translateX(-100%)';
+      currentIndex = (currentIndex + 1) % items.length;
+      items[currentIndex].style.transform = 'translateX(0)';
+    }
 
-    <section class="banner">
-        <div class="banner-content">
-            <h1>Food</h1>
-            <ul class="categories">
-                <li>Sandwich and Waffle</li><li></li><li></li>
-                <li>Rice Meals</li><li></li><li></li>
-                <li>Pasta with Garlic Bread</li><li></li><li></li>
-                <li>Starters</li>
-            </ul>
-        </div>
-    </section>
+    setInterval(showNextImage, 3000); // Auto-slide every 3 seconds
+  </script>
 
-    <!-- Food Menu Section -->
-    <section class="food-menu">
-        <h2>Sandwich and Waffles</h2>
-        <div class="menu-items">
-            <div class="item">
-                <h3>Ham and Cheese Sandwich</h3>
-                <hr>
-                <img src="food/sandwich_and_waffles/ham_cheese_sandwich.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱110.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Clubhouse Sandwich</h3>
-                <hr>
-                <img src="food/sandwich_and_waffles/clubhouse_sandwich.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Classic Maple Waffle</h3>
-                <hr>
-                <img src="food/sandwich_and_waffles/classic_maple_waffle.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Choco-Banana Waffle</h3>
-                <hr>
-                <img src="food/sandwich_and_waffles/choco_banana_waffle.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Bacon and Egg Waffle</h3>
-                <hr>
-                <img src="food/sandwich_and_waffles/bacon_and_egg_waffle.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-        </div>
-    </section>
+  <section class="banner">
+    <div class="banner-content">
+      <h1>Food</h1>
+      <ul class="categories">
+        <li>Sandwich and Waffle</li>
+        <li></li>
+        <li></li>
+        <li>Rice Meals</li>
+        <li></li>
+        <li></li>
+        <li>Pasta with Garlic Bread</li>
+        <li></li>
+        <li></li>
+        <li>Starters</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Pasta with Garlic Bread -->
-    <section class="food-menu">
-        <h2>Pasta with Garlic Bread</h2>
-        <div class="menu-items">
-            <div class="item">
-                <h3>Creamy Tuna Carbonara</h3>
-                <hr>
-                <img src="food/pasta_with_garlic_bread/creamy_tuna_carbonara.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱120.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Baked Lasagna</h3>
-                <hr>
-                <img src="food/pasta_with_garlic_bread/baked_lasagna.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱160.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-        </div>
-    </section>
+  <!-- Food Menu Section -->
+  <section class="food-menu">
+    <h2>Sandwich and Waffles</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Ham and Cheese Sandwich</h3>
+        <hr>
+        <img src="food/sandwich_and_waffles/ham_cheese_sandwich.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱110.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Clubhouse Sandwich</h3>
+        <hr>
+        <img src="food/sandwich_and_waffles/clubhouse_sandwich.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Classic Maple Waffle</h3>
+        <hr>
+        <img src="food/sandwich_and_waffles/classic_maple_waffle.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Choco-Banana Waffle</h3>
+        <hr>
+        <img src="food/sandwich_and_waffles/choco_banana_waffle.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Bacon and Egg Waffle</h3>
+        <hr>
+        <img src="food/sandwich_and_waffles/bacon_and_egg_waffle.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Rice Meals -->
-    <section class="food-menu">
-        <h2>Rice Meals</h2>
-        <div class="menu-items">
-            <div class="item">
-                <h3>Pork Liempo</h3>
-                <hr>
-                <img src="food/rice_meals/pork_liempo.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Spam and Egg</h3>
-                <hr>
-                <img src="food/rice_meals/spam_and_egg.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱150.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Signature Wings</h3>
-                <hr>
-                <img src="food/rice_meals/signature_wings.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>House Special Thigh Fillet</h3>
-                <hr>
-                <img src="food/rice_meals/house_special_thigh_fillet.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Boneless Bangus</h3>
-                <hr>
-                <img src="food/rice_meals/boneless_bangus.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱150.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Fish Fillet</h3>
-                <hr>
-                <img src="food/rice_meals/fish_fillet.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱140.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-        </div>
-    </section>
+  <!-- Pasta with Garlic Bread -->
+  <section class="food-menu">
+    <h2>Pasta with Garlic Bread</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Creamy Tuna Carbonara</h3>
+        <hr>
+        <img src="food/pasta_with_garlic_bread/creamy_tuna_carbonara.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱120.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Baked Lasagna</h3>
+        <hr>
+        <img src="food/pasta_with_garlic_bread/baked_lasagna.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱160.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Starters -->
-    <section class="food-menu">
-        <h2>Starters</h2>
-        <div class="menu-items">
-            <div class="item">
-                <h3>Garlic Bread</h3>
-                <hr>
-                <img src="food/starters/garlic_bread.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱100.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Flavored Fries</h3>
-                <hr>
-                <img src="food/starters/flavored_fries.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱80.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Fries Overload</h3>
-                <hr>
-                <img src="food/starters/fries_overload.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱80.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Nachos Overload</h3>
-                <hr>
-                <img src="food/starters/nachos_overload.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱110.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Potato Wedges</h3>
-                <hr>
-                <img src="food/starters/potato_wedges.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱80.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Spam Fries</h3>
-                <hr>
-                <img src="food/starters/spam_fries.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱80.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-            <div class="item">
-                <h3>Calamares</h3>
-                <hr>
-                <img src="food/starters/calamares.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
-                <p>₱130.00</p>
-                <button class="add-to-cart">Add to cart</button>
-            </div>
-        </div>
-    </section>
+  <!-- Rice Meals -->
+  <section class="food-menu">
+    <h2>Rice Meals</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Pork Liempo</h3>
+        <hr>
+        <img src="food/rice_meals/pork_liempo.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Spam and Egg</h3>
+        <hr>
+        <img src="food/rice_meals/spam_and_egg.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱150.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Signature Wings</h3>
+        <hr>
+        <img src="food/rice_meals/signature_wings.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>House Special Thigh Fillet</h3>
+        <hr>
+        <img src="food/rice_meals/house_special_thigh_fillet.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Boneless Bangus</h3>
+        <hr>
+        <img src="food/rice_meals/boneless_bangus.png" class="food-menu" alt="Food"
+          style="width: 300px; height: 250px;">
+        <p>₱150.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Fish Fillet</h3>
+        <hr>
+        <img src="food/rice_meals/fish_fillet.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱140.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <div class="bottom-bar">
-            <p> © 2024 Hangout Cafe. All Rights Reserved.</p>
-        </div>
-    </footer>
+  <!-- Starters -->
+  <section class="food-menu">
+    <h2>Starters</h2>
+    <div class="menu-items">
+      <div class="item">
+        <h3>Garlic Bread</h3>
+        <hr>
+        <img src="food/starters/garlic_bread.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱100.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Flavored Fries</h3>
+        <hr>
+        <img src="food/starters/flavored_fries.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱80.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Fries Overload</h3>
+        <hr>
+        <img src="food/starters/fries_overload.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱80.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Nachos Overload</h3>
+        <hr>
+        <img src="food/starters/nachos_overload.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱110.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Potato Wedges</h3>
+        <hr>
+        <img src="food/starters/potato_wedges.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱80.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Spam Fries</h3>
+        <hr>
+        <img src="food/starters/spam_fries.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱80.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+      <div class="item">
+        <h3>Calamares</h3>
+        <hr>
+        <img src="food/starters/calamares.png" class="food-menu" alt="Food" style="width: 300px; height: 250px;">
+        <p>₱130.00</p>
+        <button class="add-to-cart">Add to cart</button>
+      </div>
+    </div>
+  </section>
 
-    <script src="scripts.js"></script> <!-- Ensure your JS file is in the same folder or provide a correct relative path -->
+  <footer>
+    <div class="bottom-bar">
+      <p> © 2024 Hangout Cafe. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+  <!-- Ensure your JS file is in the same folder or provide a correct relative path -->
 </body>
+
 </html>

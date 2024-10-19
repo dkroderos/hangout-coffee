@@ -1,545 +1,544 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Special Drinks</title>
-    <link rel="stylesheet" href="/special/special.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lobster"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="icon" href="pics/logo" type="image/icon type">
-  </head>
 
-  <body>
-    <!-- NAVBAR SECTION -->
-    <header>
-      <nav>
-        <div class="logo">
-            <img src="/cart/pics/logo.png" alt="Hangout Café">
-            <span>Hangout Café</span>
-        </div>
-          
-          <ul class="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/coffee">Coffee</a></li>
-          <li><a href="/regular">Regular Drinks</a></li>
-          <li><a href="/food">Food</a></li>
-          <li><a href="/special">Special Drinks</a></li>
-          <a href="/cart" style="text-decoration: none;  display: flex;">
-            <span class="cart-icon">
-                <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
-            </span>
-            <span id="cart-count" style="color: black;"></span>
-          </a>
-          </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Special Drinks</title>
+  <link rel="stylesheet" href="/special/special.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="pics/logo" type="image/icon type">
+</head>
+
+<body>
+  <!-- NAVBAR SECTION -->
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/cart/pics/logo.png" alt="Hangout Café">
+        <span>Hangout Café</span>
+      </div>
+
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/coffee">Coffee</a></li>
+        <li><a href="/regular">Regular Drinks</a></li>
+        <li><a href="/food">Food</a></li>
+        <li><a href="/special">Special Drinks</a></li>
+        <a href="/cart" style="text-decoration: none;  display: flex;">
+          <span class="cart-icon">
+            <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
+          </span>
+          <span id="cart-count" style="color: black;"></span>
+        </a>
+      </ul>
+    </nav>
   </header>
 
   <script>
-      window.onscroll = function() { stickyNavbar() };
-    
-      var header = document.querySelector("header");
-      var sticky = header.offsetTop;
-    
-      function stickyNavbar() {
-        if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-        } else {
-          header.classList.remove("sticky");
-        }
-      }
-    </script>
+    window.onscroll = function () { stickyNavbar() };
 
-    <!-- HEADER SECTION -->
-    <section class="section-1">
-        
-      <div class="section-header">
-          <h1>Special Drinks</h1>
-      </div> 
-  
-      <div class = "section-text1">
-          <p> <a href="#berry-series">Berry Series</a> | <a href="#non-coffee">Blended Non-Coffee</a> | <a href="#oreo-cheesecake">Oreo Cheesecake</a> | <a href="#nutella-series">Nutella Series</a> | <a href="#soda-punch">Soda Punch</a> | <a href="#delight-mixes">Delight Mixes</a> </p>
-      </div>
-     
+    var header = document.querySelector("header");
+    var sticky = header.offsetTop;
+
+    function stickyNavbar() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+  </script>
+
+  <!-- HEADER SECTION -->
+  <section class="section-1">
+
+    <div class="section-header">
+      <h1>Special Drinks</h1>
+    </div>
+
+    <div class="section-text1">
+      <p> <a href="#berry-series">Berry Series</a> | <a href="#non-coffee">Blended Non-Coffee</a> | <a
+          href="#oreo-cheesecake">Oreo Cheesecake</a> | <a href="#nutella-series">Nutella Series</a> | <a
+          href="#soda-punch">Soda Punch</a> | <a href="#delight-mixes">Delight Mixes</a> </p>
+    </div>
+
   </section>
 
 
   <!-- BERRY SERIES -->
   <section class="section-2">
-      <div class="landing" id="berry-series"></div>
-      <section class="section-2_1">
+    <div class="landing" id="berry-series"></div>
+    <section class="section-2_1">
 
-          <h1>BERRY SERIES</h1>
-          
-          <div class="container">
+      <h1>BERRY SERIES</h1>
 
-              <div class="card-container">
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/strawberry_cheesecake.png" alt="Strawberry Cheesecake">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Strawberry Cheesecake</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱160</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
+      <div class="container">
 
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/blueberry_cheesecake.png" alt="Blueberry Cheesecake">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Blueberry Cheesecake</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱160</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <div class="best-seller">
-                              <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
-                          </div>
-                          <img src="specialdrinks_png/strawberry_frappe.png" alt="Strawberry Frappe">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Strawberry Frappe</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱170</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <div class="best-seller">
-                              <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
-                          </div>
-                          <img src="specialdrinks_png/blueberry_frappe.png" alt="Blueberry Frappe">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Blueberry Frappe</3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱170</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-      </section>
-
-  <!-- BLENDED NON COFFEE -->
-      <div class="landing" id="non-coffee"></div>
-      <section class="section-2_1">
-
-          <h1>BLENDED NON-COFFEE</h1>
-
-          <div class="container">
-            <div class="card-container">
-              <div class="card">
-                <div class="card-content">
-                  <img src="specialdrinks_png/cookies_and_cream.png" alt="Cookies and Cream">
-                  <div class="card-details">
-                    <div class="details">
-                        <h3>Cookies and Cream</h3>
-                    </div>
-                    <div class="line"></div>
-                    <div class="details">
-                      <p>16oz.</p>
-                      <p>₱140</p>
-                      <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                    <div class="details">
-                      <p>22oz.</p>
-                      <p>₱160</p>
-                      <button class="add-to-cart">Add to Cart</button>
-                    </div>
-                  </div>
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/strawberry_cheesecake.png" alt="Strawberry Cheesecake">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Strawberry Cheesecake</h3>
                 </div>
-              </div>
-
-              <div class="card">
-                  <div class="card-content">
-                      <img src="specialdrinks_png/caramelized_cream.png" alt="Caramelized Cream">
-                      <div class="card-details">
-                          <div class="details">
-                              <h3>Caramelized Cream</h3>
-                          </div>
-                          <div class="line"></div>
-                          <div class="details">
-                            <p>16oz.</p>
-                            <p>₱140</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                          </div>
-                          <div class="details">
-                            <p>22oz.</p>
-                            <p>₱160</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="card">
-                  <div class="card-content">
-                      <div class="best-seller">
-                          <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
-                      </div>
-                      <img src="specialdrinks_png/chocolate_overload.png" alt="Chocolate Overload">
-                      <div class="card-details">
-                          <div class="details">
-                              <h3>Chocolate Overload</h3>
-                          </div>
-                          <div class="line"></div>
-                          <div class="details">
-                            <p>16oz.</p>
-                            <p>₱140</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                          </div>
-                          <div class="details">
-                            <p>22oz.</p>
-                            <p>₱160</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="card">
-                  <div class="card-content">
-                      <img src="specialdrinks_png/matcha_green_tea.png" alt="Matcha Green Tea">
-                      <div class="card-details">
-                          <div class="details">
-                              <h3>Matcha Green Tea</h3>
-                          </div>
-                          <div class="line"></div>
-                          <div class="details">
-                            <p>16oz.</p>
-                            <p>₱150</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                          </div>
-                          <div class="details">
-                            <p>22oz.</p>
-                            <p>₱170</p>
-                            <button class="add-to-cart">Add to Cart</button>
-                          </div>
-                      </div>
-                  </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
               </div>
             </div>
           </div>
 
-      </section>
-
-  <!-- NUTELLA SERIES -->
-      <div class="landing" id="nutella-series"></div>
-      <section class="section-2_1">
-
-          <h1>NUTELLA SERIES</h1>
-
-          <div class="container">
-
-              <div class="card-container">
-                  <div class="card">
-                      <div class="card-content">
-                          <div class="best-seller">
-                              <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
-                          </div>
-                          <img src="specialdrinks_png/nutella_cheesecake.png" alt="Nutella Cheesecake">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Nutella Cheesecake</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱170</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/banana_nutella_frappe.png" alt="Banana Nutella Frappe">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Banana Nutella Frappe</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱170</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/nutella_cookie_crumble_(coffee).png" alt="Nutella Cookie Crumble (Coffee)">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Nutella Cookie Crumble (Coffee)</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱170</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/blueberry_cheesecake.png" alt="Blueberry Cheesecake">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Blueberry Cheesecake</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
               </div>
-
-
+            </div>
           </div>
 
-      </section>
-
-
-  <!-- OREO CHEESECAKE -->
-      <div class="landing" id="oreo-cheesecake"></div>
-      <section class="section-2_1">
-
-          <h1>OREO CHEESECAKE</h1>
-
-          <div class="container">
-
-              <div class="card-container">
-                  <div class="card">
-                      <div class="card-content">
-                          <div class="best-seller">
-                              <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
-                          </div>
-                          <img src="specialdrinks_png/choco_oreo_cheesecake.png" alt="Choco Oreo Cheesecake">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Choco Oreo Cheesecake</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱160</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/vanilla_oreo_cheesecake.png" alt="Vanilla Oreo Cheesecake">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Vanilla Oreo Cheesecake</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱160</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/matcha_oreo_cheesecake.png" alt="Matcha Oreo Cheesecake">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Matcha Oreo Cheesecake</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱160</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-
+          <div class="card">
+            <div class="card-content">
+              <div class="best-seller">
+                <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
               </div>
-
+              <img src="specialdrinks_png/strawberry_frappe.png" alt="Strawberry Frappe">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Strawberry Frappe</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱170</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
           </div>
 
-      </section>
-  
-  <!-- SODA PUNCH -->
-      <div class="landing" id="soda-punch"></div>
-      <section class="section-2_1">
-
-          <h1>SODA PUNCH</h1>
-
-          <div class="container">
-
-              <div class="card-container">
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/strawberry_soda.png" alt="Strawberry Soda">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Strawberry Soda</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱140</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <img src="specialdrinks_png/blueberry_soda.png" alt="Blueberry Soda">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Blueberry Soda</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱140</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                          <div class="best-seller">
-                              <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
-                          </div>
-                          <img src="specialdrinks_png/green_apple_soda.png" alt="Green Apple Soda">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Green Apple Soda</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱140</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-
+          <div class="card">
+            <div class="card-content">
+              <div class="best-seller">
+                <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
               </div>
+              <img src="specialdrinks_png/blueberry_frappe.png" alt="Blueberry Frappe">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Blueberry Frappe</3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱170</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+    </section>
+
+    <!-- BLENDED NON COFFEE -->
+    <div class="landing" id="non-coffee"></div>
+    <section class="section-2_1">
+
+      <h1>BLENDED NON-COFFEE</h1>
+
+      <div class="container">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/cookies_and_cream.png" alt="Cookies and Cream">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Cookies and Cream</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>16oz.</p>
+                  <p>₱140</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
           </div>
 
-      </section>
-
-  <!-- Delight Mixes -->
-      <div class="landing" id="delight-mixes"></div>
-      <section class="section-2_1">
-
-          <h1>DELIGHT MIXES</h1>
-
-          <div class="container">
-
-              <div class="card-container">
-                  <div class="card">
-                      <div class="card-content">
-                          <div class="best-seller">
-                              <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
-                          </div>
-                          <img src="specialdrinks_png/yakumogu.png" alt="Yakumogu">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Yakumogu</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱160</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="card">
-                      <div class="card-content">
-                        <img src="specialdrinks_png/blue_ocean.png" alt="Blue Ocean">
-                          <div class="card-details">
-                              <div class="details">
-                                  <h3>Blue Ocean</h3>
-                              </div>
-                              <div class="line"></div>
-                              <div class="details">
-                                  <p>22oz.</p>
-                                  <p>₱160</p>
-                                  <button class="add-to-cart">Add to Cart</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/caramelized_cream.png" alt="Caramelized Cream">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Caramelized Cream</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>16oz.</p>
+                  <p>₱140</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
               </div>
-
+            </div>
           </div>
 
-      </section>
+          <div class="card">
+            <div class="card-content">
+              <div class="best-seller">
+                <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
+              </div>
+              <img src="specialdrinks_png/chocolate_overload.png" alt="Chocolate Overload">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Chocolate Overload</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>16oz.</p>
+                  <p>₱140</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <br/><br/>
-<!-- donut         -->
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/matcha_green_tea.png" alt="Matcha Green Tea">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Matcha Green Tea</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>16oz.</p>
+                  <p>₱150</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱170</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- NUTELLA SERIES -->
+    <div class="landing" id="nutella-series"></div>
+    <section class="section-2_1">
+
+      <h1>NUTELLA SERIES</h1>
+
+      <div class="container">
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <div class="best-seller">
+                <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
+              </div>
+              <img src="specialdrinks_png/nutella_cheesecake.png" alt="Nutella Cheesecake">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Nutella Cheesecake</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱170</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/banana_nutella_frappe.png" alt="Banana Nutella Frappe">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Banana Nutella Frappe</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱170</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/nutella_cookie_crumble_(coffee).png" alt="Nutella Cookie Crumble (Coffee)">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Nutella Cookie Crumble (Coffee)</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱170</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- OREO CHEESECAKE -->
+    <div class="landing" id="oreo-cheesecake"></div>
+    <section class="section-2_1">
+
+      <h1>OREO CHEESECAKE</h1>
+
+      <div class="container">
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <div class="best-seller">
+                <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
+              </div>
+              <img src="specialdrinks_png/choco_oreo_cheesecake.png" alt="Choco Oreo Cheesecake">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Choco Oreo Cheesecake</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/vanilla_oreo_cheesecake.png" alt="Vanilla Oreo Cheesecake">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Vanilla Oreo Cheesecake</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/matcha_oreo_cheesecake.png" alt="Matcha Oreo Cheesecake">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Matcha Oreo Cheesecake</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- SODA PUNCH -->
+    <div class="landing" id="soda-punch"></div>
+    <section class="section-2_1">
+
+      <h1>SODA PUNCH</h1>
+
+      <div class="container">
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/strawberry_soda.png" alt="Strawberry Soda">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Strawberry Soda</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱140</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/blueberry_soda.png" alt="Blueberry Soda">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Blueberry Soda</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱140</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="best-seller">
+                <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
+              </div>
+              <img src="specialdrinks_png/green_apple_soda.png" alt="Green Apple Soda">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Green Apple Soda</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱140</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Delight Mixes -->
+    <div class="landing" id="delight-mixes"></div>
+    <section class="section-2_1">
+
+      <h1>DELIGHT MIXES</h1>
+
+      <div class="container">
+
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <div class="best-seller">
+                <img src="specialdrinks_pics/best-seller.png" alt="Best Seller!">
+              </div>
+              <img src="specialdrinks_png/yakumogu.png" alt="Yakumogu">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Yakumogu</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <img src="specialdrinks_png/blue_ocean.png" alt="Blue Ocean">
+              <div class="card-details">
+                <div class="details">
+                  <h3>Blue Ocean</h3>
+                </div>
+                <div class="line"></div>
+                <div class="details">
+                  <p>22oz.</p>
+                  <p>₱160</p>
+                  <button class="add-to-cart">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <br /><br />
+    <!-- donut         -->
   </section>
 
-</section>
-     
+  </section>
 
-<!-- FOOTER SECTION -->
-   <footer>
-      <div class="bottom-bar">
-          <p> © 2024 Hangout Cafe. All Rights Reserved.</p>
-      </div>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    <div class="bottom-bar">
+      <p> © 2024 Hangout Cafe. All Rights Reserved.</p>
+    </div>
   </footer>
-    <script src="/special/special.js"></script>
-  </body>
+  <script src="/special/special.js"></script>
+</body>
+
 </html>
