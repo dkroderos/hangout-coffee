@@ -231,7 +231,7 @@ p {
 }
 
 .section-2-left video {
-  width: 100%;
+  width: 80%;
   border-radius: 1rem;
 }
 
@@ -707,14 +707,21 @@ input:focus {
   }
 }
 
-/* NAVBAR */
+/* Navbar */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: Poppins;
+}
+
 header {
-  background-color: #f2e9e9;
+  background-color: #e1d9cf;
   padding: 15px 30px;
+  color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  font-family: Poppins;
+  font-size: 1.92rem;
 }
 
 nav {
@@ -732,10 +739,11 @@ nav .logo img {
   width: 40px;
   height: 40px;
   margin-right: 10px;
+  margin-left: 2rem;
 }
 
 nav .logo span {
-  font-size: 1.35rem;
+  font-size: 19.2px;
   font-weight: 500;
 }
 
@@ -749,14 +757,13 @@ nav .menu li {
 }
 
 nav .menu li a {
-  font-size: 1.2rem;
+  font-size: 1.92rem;
   font-weight: 500;
-  text-decoration: none;
-  color: black;
 }
 
 .cart-icon img {
   margin-left: 25px;
+  margin-right: 10px;
   width: 24px;
   height: 24px;
 }
