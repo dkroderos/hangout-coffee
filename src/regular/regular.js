@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updateCartCount(getCart()); 
 });
 
-// Handle the "Add to Cart" button click
 function setupAddToCartButtons() {
     const buttons = document.querySelectorAll('.add-to-cart');
 
@@ -11,15 +10,22 @@ function setupAddToCartButtons() {
         button.addEventListener('click', function () {
             const grandgrandParent = this.parentElement.parentElement.parentElement;
             const parent = this.parentElement;
+            
+            // Change from selecting 'h3' directly to using 'querySelector' for the product name
             const name = grandgrandParent.querySelector('h3').innerText;
-            const ounce = parent.querySelector('span:nth-child(1)').innerText;
-            const price = parent.querySelector('span:nth-child(2)').innerText;
+            
+            // Select the first and second 'p' elements for size and price
+            const ounce = parent.querySelector('p:nth-child(1)').innerText;
+            const price = parent.querySelector('p:nth-child(2)').innerText;
 
-            const itemName = name + ` (${ounce})`;
+            // Separate the item name from the ounce
+            const itemName = name; // Only the name without ounces
+            const itemType = ounce; // Keep the ounce for separate storage
             const itemPrice = parseFloat(price.replace('₱', ''));
 
             const item = {
                 name: itemName,
+                type: itemType, // Store the ounce separately
                 price: itemPrice
             };
 
@@ -28,11 +34,11 @@ function setupAddToCartButtons() {
     });
 }
 
-//Add to cart function
+
 function addToCart(item) {
-    let quantity = prompt("How many of " + item.name + " would you like to add?", "1");
+    let quantity = prompt("How many of " + item.name + " (" + item.type + ") would you like to add?", "1");
     
-    if (quantity === null) {//canceled
+    if (quantity === null) { // If the user cancels the prompt
         return; 
     }
 
@@ -44,21 +50,25 @@ function addToCart(item) {
     }
     
     let cart = getCart();
-    const existingItem = cart.find(cartItem => cartItem.name === item.name);
-    const cost = item.price * quantity;
-    
+    const existingItem = cart.find(cartItem => cartItem.name === item.name && cartItem.type === item.type);
+    const totalCost = item.price * quantity; // Calculate total cost
+
     if (existingItem) {
-        existingItem.quantity += quantity;
+        existingItem.quantity += quantity; // Increase quantity for existing item
     } else {
-        cart.push({ ...item, quantity }); 
+        cart.push({ 
+            ...item, 
+            quantity: quantity, 
+        }); 
     }
 
     saveCart(cart);
-    alert(quantity + " of " + item.name + " added to cart! \nCost: ₱ " + cost);
+    alert(quantity + " of " + item.name + " (" + item.type + ") added to cart! \nCost: ₱ " + totalCost);
 }
 
 
-// Get current cart from localStorage
+
+// Get the current cart from localStorage
 function getCart() {
     let cart = localStorage.getItem("cart");
     if (cart) {

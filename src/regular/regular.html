@@ -1,215 +1,246 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangout Café</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/regular/regular.css" />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="regular.css">
+</head>
+<body>
     <header>
-      <nav>
-        <div class="logo">
-          <img src="/regular/pics/logo.png" alt="Hangout Café" />
-          <span>Hangout Café</span>
-        </div>
-        <ul class="menu">
-          <li><a href="/">Home</a></li>
-          <li><a href="/coffee">Coffee</a></li>
-          <li><a href="/regular">Regular Drinks</a></li>
-          <li><a href="/food">Food</a></li>
-          <li><a href="/special">Special Drinks</a></li>
-          <a href="/cart" style="text-decoration: none;  display: flex;">
-          <span class="cart-icon">
-            <img src="/regular/pics/cart.png" class="color-tinted" alt="Cart" />
-          </span>
-          <span id="cart-count" style="color: black;"></span>
-          </a>
-        </ul>
-      </nav>
+        <nav>
+          <div class="logo">
+              <img src="/cart/pics/logo.png" alt="Hangout Café">
+              <span>Hangout Café</span>
+          </div>
+            
+            <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="/coffee">Coffee</a></li>
+            <li><a href="/regular">Regular Drinks</a></li>
+            <li><a href="/food">Food</a></li>
+            <li><a href="/special">Special Drinks</a></li>
+            <a href="/cart" style="text-decoration: none;  display: flex;">
+              <span class="cart-icon">
+                  <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
+              </span>
+              <span id="cart-count" style="color: black;"></span>
+            </a>
+            </ul>
+        </nav>
     </header>
 
     <div class="background-small">
-      <div class="centered-text">
-        <h1>Regular Drinks</h1>
-        <div class="flex-container">
-          <span class="item">Classic Milktea</span>
-          <span class="item">Fruit Tea</span>
+        <div class="centered-text">
+            <h1>Regular Drinks</h1>
+            <div class="flex-container">
+                <a href="#classic-milktea" class="item">Classic Milktea</a>
+                <a href="#fruit-tea" class="item">Fruit Tea</a>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="background-large">
-      <div class="container">
-        <h3 class="title">Classic Milktea</h3>
-        <div class="product-container grid-container">
-          <div class="product">
-            <h3 class="product-title">
-              Wintermelon
-              <img
-                src="/regular/pics/best-seller.png"
-                alt="Best Seller"
-                class="best-seller-logo"
-              />
-            </h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">16oz</span>
-                <span class="price">₱90.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱110.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
+        <div class="container">
+            <h3 id="classic-milktea" class="title">Classic Milktea</h3>
+            <div class="product-container grid-container">
+                <div class="product">
+                    <img src="pics/wintermelon.png" alt="Wintermelon" class="product-image" onclick="openModal(this)">
+                    <h3 class="product-title">
+                        Wintermelon
+                        <img src="pics/best-seller.png" alt="Best Seller" class="best-seller-logo">
+                    </h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">16oz</p>
+                            <p class="price">₱90.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱110.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/okinawa.png" alt="Okinawa" class="product-image" onclick="openModal(this)">
+                    <h3>Okinawa</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">16oz</p>
+                            <p class="price">₱90.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱110.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/taro.png" alt="Taro" class="product-image" onclick="openModal(this)">
+                    <h3>Taro</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">16oz</p>
+                            <p class="price">₱90.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱110.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/hokkaido.png" alt="Hokkaido" class="product-image" onclick="openModal(this)">
+                    <h3>Hokkaido</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">16oz</p>
+                            <p class="price">₱105.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱120.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/chocolate.png" alt="Chocolate" class="product-image" onclick="openModal(this)">
+                    <h3 class="product-title">
+                        Chocolate
+                        <img src="pics/best-seller.png" alt="Best Seller" class="best-seller-logo">
+                    </h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">16oz</p>
+                            <p class="price">₱90.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱110.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/matcha.png" alt="Matcha" class="product-image" onclick="openModal(this)">
+                    <h3>Matcha</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">16oz</p>
+                            <p class="price">₱105.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱120.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="product">
-            <h3>Okinawa</h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">16oz</span>
-                <span class="price">₱90.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱110.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <h3>Taro</h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">16oz</span>
-                <span class="price">₱90.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱110.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
-          <!-- ggparent -->
-          <div class="product">
-            <h3>Hokkaido</h3>
-            <hr />
-            <!-- gparent -->
-            <div class="sizes">
-              <!-- parent -->
-              <div class="size-option">
-                <span class="size">16oz</span>
-                <span class="price">₱105.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱120.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <h3 class="product-title">
-              Chocolate
-              <img
-                src="/regular/pics/best-seller.png"
-                alt="Best Seller"
-                class="best-seller-logo"
-              />
-            </h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">16oz</span>
-                <span class="price">₱90.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱110.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <h3>Matcha</h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">16oz</span>
-                <span class="price">₱105.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱120.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <h3 class="title">Fruit Tea</h3>
-        <div class="product-container grid-container">
-          <div class="product">
-            <h3>Kiwi</h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱105.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
+            <h3 id="fruit-tea" class="title">Fruit Tea</h3>
+            <div class="product-container grid-container">
+                <div class="product">
+                    <img src="pics/kiwi.png" alt="Kiwi" class="product-image" onclick="openModal(this)">
+                    <h3>Kiwi</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱105.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/lemon.png" alt="Lemon" class="product-image" onclick="openModal(this)">
+                    <h3>Lemon</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱105.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/passion_fruit.png" alt="Passion Fruit" class="product-image" onclick="openModal(this)">
+                    <h3>Passion Fruit</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱105.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product">
+                    <img src="pics/lychee.png" alt="Lychee" class="product-image" onclick="openModal(this)">
+                    <h3>Lychee</h3>
+                    <hr>
+                    <div class="sizes">
+                        <div class="size-option">
+                            <p class="size">22oz</p>
+                            <p class="price">₱105.00</p>
+                            <button class="add-to-cart">Add to cart</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="product">
-            <h3>Lemon</h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱105.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <h3>Passion Fruit</h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱105.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <h3>Lychee</h3>
-            <hr />
-            <div class="sizes">
-              <div class="size-option">
-                <span class="size">22oz</span>
-                <span class="price">₱105.00</span>
-                <button class="add-to-cart">Add to cart</button>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-    <footer>© 2024 Hangout Café. All Rights Reserved.</footer>
-    <script src="/regular/regular.js"></script>
-  </body>
+
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <footer>
+        <div class="bottom-bar">
+            <p> © 2024 Hangout Cafe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="regular.js"></script>
+    <script>
+        function openModal(image) {
+            const modal = document.getElementById("imageModal");
+            const modalImage = document.getElementById("modalImage");
+            modal.style.display = "block";
+            modalImage.src = image.src;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none"; 
+        }
+
+        const modal = document.getElementById("imageModal");
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                closeModal(); 
+            }
+        });
+    </script>
+</body>
 </html>

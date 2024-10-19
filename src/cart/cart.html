@@ -25,23 +25,27 @@
 <body>
     <!-- Navbar -->
     <header>
-        <nav>
-            <div class="logo">
-                <img src="/cart/pics/logo.png" alt="Hangout Café">
-                <span>Hangout Café</span>
-            </div>
-            <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/coffee">Coffee</a></li>
-                <li><a href="/regular">Regular Drinks</a></li>
-                <li><a href="/food">Food</a></li>
-                <li><a href="/special">Special Drinks</a></li>
-                <span class="cart-icon">
-                    <img src="/cart/pics/cart.png" class="color-tinted" alt="Cart">
-                </span>
-            </ul>
-        </nav>
-    </header>
+      <nav>
+        <div class="logo">
+            <img src="/cart/pics/logo.png" alt="Hangout Café">
+            <span>Hangout Café</span>
+        </div>
+          
+          <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/coffee">Coffee</a></li>
+          <li><a href="/regular">Regular Drinks</a></li>
+          <li><a href="/food">Food</a></li>
+          <li><a href="/special">Special Drinks</a></li>
+          <a href="/cart" style="text-decoration: none;  display: flex;">
+            <span class="cart-icon">
+                <img src="/special/pics/cart.png" class="color-tinted" alt="Cart" />
+            </span>
+            <span id="cart-count" style="color: black;"></span>
+          </a>
+          </ul>
+      </nav>
+  </header>
 
     <!-- Main Content -->
     <div class="container">
