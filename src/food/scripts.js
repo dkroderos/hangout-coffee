@@ -23,7 +23,10 @@ function setupAddToCartButtons() {
         while (true) {
           flavor = prompt("Choose a flavor: BBQ, Cheese, Sour Cream");
 
-          if (["BBQ", "Cheese", "Sour Cream"].includes(flavor)) {
+          if (flavor === null)
+            return;
+
+          if (["bbq", "cheese", "sour cream"].includes(flavor.toLowerCase())) {
             itemName;
             break; // Exit loop once valid flavor is selected
           } else {
