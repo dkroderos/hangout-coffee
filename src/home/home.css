@@ -231,7 +231,7 @@ p {
 }
 
 .section-2-left video {
-  width: 80%;
+  width: 100%;
   border-radius: 1rem;
 }
 
@@ -277,6 +277,7 @@ p {
 .section-4__p,
 .section-5__p,
 .section-6__p {
+  font-size: 16px;
   margin-top: 1rem;
 }
 
@@ -360,6 +361,7 @@ p {
 
 .section-5__testimonial p {
   margin: 1.5rem 0 3rem;
+  font-size: 16px;
 }
 
 .section-5__testimonial p:nth-of-type(1) {
@@ -450,6 +452,7 @@ i.fa-star {
 
 .section-6__blog-descp {
   margin: 1.25rem 0 2rem;
+  font-size: 20px;
 }
 
 /* Section 7 styles */
@@ -475,7 +478,7 @@ i.fa-star {
 /*imp! FOOTER-SECTION */
 
 .footer {
-  background-image: url(./Images/footer-banner.svg);
+  background-image: url(/home/Images/footer-banner.svg);
   margin-top: var(--common-margin-top);
   background-size: cover;
 }
@@ -553,11 +556,12 @@ input:focus {
 
 .footer__social-links {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .footer__social-links i {
   font-size: var(--fs-1-8);
+  margin-right: 15px;
   color: var(--pure-white);
 }
 
