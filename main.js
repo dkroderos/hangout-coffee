@@ -45,7 +45,7 @@ app.use((req, res) => {
   res.redirect("/");
 });
 
-const port = 80;
+const port = 3000;
 
 const getIPAddress = () => {
   const interfaces = os.networkInterfaces();
