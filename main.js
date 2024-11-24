@@ -1,7 +1,3 @@
-const { google } = require("googleapis");
-
-const scopes = "https://www.googleapis.com/auth/analytics.readonly";
-
 const express = require("express");
 const path = require("path");
 const os = require("os");
